@@ -1,0 +1,707 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Software de Gestion Educativa">
+    <meta name="author" content="NCLASSES">
+
+    <title>Nclases | @ViewBag.Title</title>
+
+    <link rel="apple-touch-icon" href="../images/LOGONCLASSES.png">
+    <link rel="shortcut icon" href="../images/LOGO/ico_NCLASSES.ico">
+
+    <!-- Stylesheets -->
+    @Styles.Render("~/bundles/Stylesheets")
+    <!-- Plugins -->
+    @Styles.Render("~/bundles/Plugins")
+    <!-- Datatable -->
+    @Styles.Render("~/Contbundlesent/Datatable")
+
+    <!-- Personalizados -->
+    @Styles.Render("~/bundles/Personalizados")
+
+    <!-- Form Advance -->
+    @Styles.Render("~/bundles/FormAdvance")
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="~/Resources/global/fonts/weather-icons/weather-icons.css">
+    <link rel="stylesheet" href="~/Resources/global/fonts/web-icons/web-icons.min.css">
+    <link rel="stylesheet" href="~/Resources/global/fonts/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Resources/global/fonts/brand-icons/brand-icons.min.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+
+    <!-- Custom -->
+    @Styles.Render("~/bundles/Custom")
+
+    <!--[if lt IE 9]>
+    <script src="~/Resources/global/vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 10]>
+    <script src="~/Resources/global/vendor/media-match/media.match.min.js"></script>
+    <script src="~/Resources/global/vendor/respond/respond.min.js"></script>
+    <![endif]-->
+    <!-- Scripts -->
+    <script src="~/Resources/global/vendor/breakpoints/breakpoints.js"></script>
+    <script>
+        Breakpoints();
+    </script>
+</head>
+<body class="animsition dashboard">
+    @RenderBody()
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <nav class="site-navbar navbar navbar-default navbar-inverse navbar-fixed-top navbar-mega bg-orange-500" role="navigation" id="AyudaBarraSuperior">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggler hamburger hamburger-close navbar-toggler-left hided" data-toggle="menubar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="hamburger-bar"></span>
+            </button>
+            <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-collapse"
+                    data-toggle="collapse">
+                <i class="icon wb-more-horizontal" aria-hidden="true"></i>
+            </button>
+
+            <!--OJO REVISAR CUAL ES LA MEJOR OPCION-->
+            <!-- Opcion 1
+                <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
+                   <img class="navbar-brand-logo" src="../images/LOGO/logo_NCLASSES.png" title="NCLASSES">
+                   <span class="navbar-brand-text hidden-xs-down">Software Gestion Educativa</span>
+                </div>-->
+            <!-- Opcion 2 -->
+            <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
+                <img class="navbar-brand-logo" src="../images/LOGO/logo_NCLASSES_blanco.png" title="NCLASSES">
+                <span class="navbar-brand-text hidden-xs-down" style="font-size: 16px;">Software Gestion Educativa</span>
+            </div>
+            <!-- Opcion 3
+                 <div class="navbar-brand navbar-brand-center">
+                   <a>
+                       <img class="navbar-brand-logo" src="../images/LOGO/LOGONCLASSES.png" style="border-radius: 50px; background-color:#fff;" title="NCLASSES">
+                       <span class="navbar-brand-text blue-grey-100 hidden-xs-down">Software Gestion Educativa</span>
+                   </a>
+                 </div>-->
+            <!--OJO REVISAR CUAL ES LA MEJOR OPCION-->
+
+
+            <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search" data-toggle="collapse">
+                <span class="sr-only">Toggle Search</span>
+                <i class="icon wb-search" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="navbar-container container-fluid">
+            <!-- Navbar Collapse -->
+            <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+                <!-- Navbar Toolbar -->
+                <ul class="nav navbar-toolbar">
+                    <li class="nav-item hidden-float" id="toggleMenubar">
+                        <a class="nav-link" data-toggle="menubar" href="#" role="button">
+                            <i class="icon hamburger hamburger-arrow-left">
+                                <span class="sr-only">Toggle menubar</span>
+                                <span class="hamburger-bar"></span>
+                            </i>
+                        </a>
+                    </li>
+                    <li class="nav-item hidden-sm-down" id="toggleFullscreen">
+                        <a class="nav-link icon icon-fullscreen" data-toggle="fullscreen" href="#" role="button">
+                            <span class="sr-only">Toggle fullscreen</span>
+                        </a>
+                    </li>
+                    <li class="nav-item hidden-float">
+                        <a class="nav-link icon wb-search" data-toggle="collapse" href="#" data-target="#site-navbar-search"
+                           role="button">
+                            <span class="sr-only">Toggle Search</span>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item dropdown dropdown-fw dropdown-mega">
+                      <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="fade" role="button">
+                        <label class="form-control-label font-weight-400 grey-100 font-size-18">Estudiantes</label>
+                        <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                      </a>
+                      <div class="dropdown-menu" role="menu">
+                        <div class="mega-content">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <h5>UI Kit</h5>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                              <h5 class="mb-0">Accordion</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                      -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false"
+                           data-animation="scale-up" role="button">
+                            <span class="avatar avatar-online">
+                                <img src="~/Resources/global/portraits/15.jpg" alt="...">
+                            </span>
+                            <label class="form-control-label font-weight-400 grey-100 font-size-18">Alejandra Marcela</label>
+                            <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" href="#" role="menuitem">
+                                <span class="avatar avatar-sm">
+                                    <img src="~/Resources/global/portraits/15.jpg" alt="..." />
+                                </span>
+                                Alejandra Marcela
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- End Navbar Toolbar -->
+                <!-- Navbar Toolbar Right -->
+                <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+                    <li class="nav-item dropdown">
+                        <label class="form-control-label font-weight-400 grey-100 font-size-18" style="padding-top:18px" id="LabelNombreUsuario">Hola, Santiago Aguilar</label>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" data-animation="scale-up"
+                           aria-expanded="false" role="button">
+                            <span class="flag-icon flag-icon-ni"></span>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
+                                <span class="flag-icon flag-icon-ni"></span> Español
+                            </a>
+                            <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
+                                <span class="flag-icon flag-icon-us"></span> English
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false"
+                           data-animation="scale-up" role="button">
+                            <span class="avatar avatar-online">
+                                <img src="../images/defaultuser.png" alt="...">
+                            </span>
+                            <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" href="#" role="menuitem"><i class="icon wb-user" aria-hidden="true"></i> Perfil de Usuario</a>
+                            <div class="dropdown-divider" role="presentation"></div>
+                            <a class="dropdown-item" href="#" id="btnLogout" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Cerrar Sesión</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" title="Notifications"
+                           aria-expanded="false" data-animation="scale-up" role="button">
+                            <i class="icon wb-bell" aria-hidden="true"></i>
+                            <span class="badge badge-pill badge-success up">5</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+                            <div class="dropdown-menu-header">
+                                <h5>NOTIFICACIONES</h5>
+                                <span class="badge badge-round badge-success">Nuevo 5</span>
+                            </div>
+
+                            <div class="list-group">
+                                <div data-role="container">
+                                    <div data-role="content">
+                                        <a class="list-group-item dropdown-item" href="javascript:void(0)" role="menuitem">
+                                            <div class="media">
+                                                <div class="pr-10">
+                                                    <i class="icon wb-order bg-red-600 white icon-circle" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Nuevas notas agregadas a los estudiantes</h6>
+                                                    <time class="media-meta" datetime="2018-06-12T20:50:48+08:00">hace 5 houras</time>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="list-group-item dropdown-item" href="javascript:void(0)" role="menuitem">
+                                            <div class="media">
+                                                <div class="pr-10">
+                                                    <i class="icon wb-user bg-green-600 white icon-circle" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Completeda la tarea del parcial 2</h6>
+                                                    <time class="media-meta" datetime="2018-06-11T18:29:20+08:00">hace 2 dias</time>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="list-group-item dropdown-item" href="javascript:void(0)" role="menuitem">
+                                            <div class="media">
+                                                <div class="pr-10">
+                                                    <i class="icon wb-settings bg-red-600 white icon-circle" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Se ha asignado nueva tarea</h6>
+                                                    <time class="media-meta" datetime="2018-06-11T14:05:00+08:00">hace 2 dias</time>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="list-group-item dropdown-item" href="javascript:void(0)" role="menuitem">
+                                            <div class="media">
+                                                <div class="pr-10">
+                                                    <i class="icon wb-calendar bg-blue-600 white icon-circle" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Reunion de padres en 2 dias</h6>
+                                                    <time class="media-meta" datetime="2018-06-10T13:50:18+08:00">hace 3 dias</time>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu-footer">
+                                <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                                    <i class="icon wb-settings" aria-hidden="true"></i>
+                                </a>
+                                <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
+                                    Todas las notificaciones
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" title="Messages"
+                           aria-expanded="false" data-animation="scale-up" role="button">
+                            <i class="icon wb-envelope" aria-hidden="true"></i>
+                            <span class="badge badge-pill badge-info up">3</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+                            <div class="dropdown-menu-header" role="presentation">
+                                <h5>MENSAJES</h5>
+                                <span class="badge badge-round badge-info">Nuevo 3</span>
+                            </div>
+
+                            <div class="list-group" role="presentation">
+                                <div data-role="container">
+                                    <div data-role="content">
+                                        <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                                            <div class="media">
+                                                <div class="pr-10">
+                                                    <span class="avatar avatar-sm avatar-online">
+                                                        <img src="~/Resources/global/portraits/2.jpg" alt="..." />
+                                                        <i></i>
+                                                    </span>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Mary Adams</h6>
+                                                    <div class="media-meta">
+                                                        <time datetime="2018-06-17T20:22:05+08:00">hace 30 minutos</time>
+                                                    </div>
+                                                    <div class="media-detail">El estudiante presenta problemas con clase de matematicas</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                                            <div class="media">
+                                                <div class="pr-10">
+                                                    <span class="avatar avatar-sm avatar-off">
+                                                        <img src="~/Resources/global/portraits/3.jpg" alt="..." />
+                                                        <i></i>
+                                                    </span>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">Caleb Richards</h6>
+                                                    <div class="media-meta">
+                                                        <time datetime="2018-06-17T12:30:30+08:00">hace 2 horas</time>
+                                                    </div>
+                                                    <div class="media-detail">La reunion sera pospuesta para la otra semana</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                                            <div class="media">
+                                                <div class="pr-10">
+                                                    <span class="avatar avatar-sm avatar-busy">
+                                                        <img src="~/Resources/global/portraits/4.jpg" alt="..." />
+                                                        <i></i>
+                                                    </span>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h6 class="media-heading">June Lane</h6>
+                                                    <div class="media-meta">
+                                                        <time datetime="2018-06-16T18:38:40+08:00">hace 2 dias</time>
+                                                    </div>
+                                                    <div class="media-detail">El evento sera en 1 dia</div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu-footer" role="presentation">
+                                <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                                    <i class="icon wb-settings" aria-hidden="true"></i>
+                                </a>
+                                <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
+                                    Ver Todos los Mensajes
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- End Navbar Toolbar Right -->
+            </div>
+            <!-- End Navbar Collapse -->
+            <!-- Site Navbar Seach -->
+            <div class="collapse navbar-search-overlap" id="site-navbar-search">
+                <form role="search">
+                    <div class="form-group">
+                        <div class="input-search">
+                            <i class="input-search-icon wb-search" aria-hidden="true"></i>
+                            <input type="text" class="form-control" name="site-search" placeholder="Search...">
+                            <button type="button" class="input-search-close icon wb-close" data-target="#site-navbar-search"
+                                    data-toggle="collapse" aria-label="Close"></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- End Site Navbar Seach -->
+        </div>
+    </nav>
+
+
+    <!-- SIDE MENU BAR-->
+    <div class="site-menubar" id="AyudaMenu">
+        <div class="site-menubar-header">
+            <div class="cover overlay bg-blue-grey-700 text-center">
+                <img id="PortadaMini" class="cover-image" src="../images/PORTADAS/portada3.png"
+                     alt="...">
+                <div class="overlay-panel vertical-align overlay-background">
+                    <div class="vertical-align-middle text-center">
+                        <a class="avatar avatar-lg" href="javascript:void(0)">
+                            <img src="../images/defaultuser.png" alt="">
+                        </a>
+                        <div class="site-menubar-info">
+                            <h5 class="site-menubar-user">SANTIAGO AGUILAR SILVA</h5>
+                            <p class="site-menubar-email">san145silva@hotmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-menubar-body">
+            <div>
+                <div>
+                    <ul class="site-menu" data-plugin="menu">
+
+                        <li class="site-menu-category">MAESTRO</li>
+                        <li class="site-menu-item has-sub">
+                            <a href="index.html">
+                                <i class="site-menu-icon icon fa-pie-chart" aria-hidden="true"></i>
+                                <span class="site-menu-title">Inicio</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="CuadernoNotas.html">
+                                <i class="site-menu-icon icon icon fa-book" aria-hidden="true"></i>
+                                <span class="site-menu-title">Cuaderno de Notas</span>
+                            </a>
+                        </li>
+
+
+
+                        <li class="site-menu-category">PADRES</li>
+                        <li class="site-menu-item has-sub">
+                            <a href="index.html">
+                                <i class="site-menu-icon icon fa-pie-chart" aria-hidden="true"></i>
+                                <span class="site-menu-title">Inicio</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="index.html">
+                                <i class="site-menu-icon icon icon fa-area-chart" aria-hidden="true"></i>
+                                <span class="site-menu-title">Resumen del Año</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="index.html">
+                                <i class="site-menu-icon icon icon fa-book" aria-hidden="true"></i>
+                                <span class="site-menu-title">Cuaderno de Notas</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="index.html">
+                                <i class="site-menu-icon icon fa-address-book " aria-hidden="true"></i>
+                                <span class="site-menu-title">Tareas Estudiante</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="PerfilUsuario.html">
+                                <i class="site-menu-icon icon fa-user-circle" aria-hidden="true"></i>
+                                <span class="site-menu-title">Perfil de Padre</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="Estudiates.html">
+                                <i class="site-menu-icon icon fa-user" aria-hidden="true"></i>
+                                <span class="site-menu-title">Perfil de Estudiantes</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="Pagos.html">
+                                <i class="site-menu-icon icon fa-cc-visa" aria-hidden="true"></i>
+                                <span class="site-menu-title">Pagos en Linea</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="Horario.html">
+                                <i class="site-menu-icon icon fa-calendar" aria-hidden="true"></i>
+                                <span class="site-menu-title">Horario</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="Calendario.html">
+                                <i class="site-menu-icon icon fa-calendar-check-o" aria-hidden="true"></i>
+                                <span class="site-menu-title">Calendario</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="Notificaciones.html">
+                                <i class="site-menu-icon icon fa-bell" aria-hidden="true"></i>
+                                <span class="site-menu-title">Mis Notificaciones</span>
+                            </a>
+                        </li>
+
+
+
+
+                        <li class="site-menu-category">COLEGIO</li>
+                        <li class="site-menu-item has-sub">
+                            <a href="Colegio.html">
+                                <i class="site-menu-icon icon fa-institution" aria-hidden="true"></i>
+                                <span class="site-menu-title">Mi Colegio</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="Materias.html">
+                                <i class="site-menu-icon icon fa-book" aria-hidden="true"></i>
+                                <span class="site-menu-title">Materias</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="Perfil.html">
+                                <i class="site-menu-icon icon fa-users" aria-hidden="true"></i>
+                                <span class="site-menu-title">Permisos Usuarios</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="Estudiates.html">
+                                <i class="site-menu-icon icon fa-user" aria-hidden="true"></i>
+                                <span class="site-menu-title">Usuarios</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="Calendario.html">
+                                <i class="site-menu-icon icon fa-calendar-check-o" aria-hidden="true"></i>
+                                <span class="site-menu-title">Calendario</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="Horario.html">
+                                <i class="site-menu-icon icon fa-calendar" aria-hidden="true"></i>
+                                <span class="site-menu-title">Horario</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="#">
+                                <i class="site-menu-icon icon fa-bar-chart" aria-hidden="true"></i>
+                                <span class="site-menu-title">Reportes</span><span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+                                <li class="site-menu-item"><a class="animsition-link" href="#"><span class="site-menu-title">Reportes 1</span></a></li>
+                                <li class="site-menu-item"><a class="animsition-link" href="#"><span class="site-menu-title">Reportes 2</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="Notificaciones.html">
+                                <i class="site-menu-icon icon fa-bell" aria-hidden="true"></i>
+                                <span class="site-menu-title">Correo Masivo</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="Carnet.html">
+                                <i class="site-menu-icon icon fa-address-card" aria-hidden="true"></i>
+                                <span class="site-menu-title">Carnet Escolar</span>
+                            </a>
+                        </li>
+
+
+
+
+                        <li class="site-menu-category">ESTUDIANTE</li>
+                        <li class="site-menu-item has-sub">
+                            <a href="index.html">
+                                <i class="site-menu-icon icon fa-pie-chart" aria-hidden="true"></i>
+                                <span class="site-menu-title">Inicio</span>
+                            </a>
+                        </li>
+                        <li class="site-menu-item has-sub">
+                            <a href="EvaluacionDocente.html">
+                                <i class="site-menu-icon icon fa-check-square-o" aria-hidden="true"></i>
+                                <span class="site-menu-title">Evaluacion Docentes</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <div class="site-menubar-section">
+                        <h5>
+                            Software Gestion Academica
+                            <span class="float-right">100%</span>
+                        </h5>
+                        <div class="progress progress-xs">
+                            <div class="progress-bar active" style="width: 100%;" role="progressbar"></div>
+                        </div>
+                        <h5>
+                            Software Gestion Academica
+                            <span class="float-right">100%</span>
+                        </h5>
+                        <div class="progress progress-xs">
+                            <div class="progress-bar progress-bar-warning" style="width: 100%;" role="progressbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="site-menubar-footer">
+            <a href="javascript: void(0);" class="fold-show" data-placement="top" data-toggle="tooltip"
+               data-original-title="Configuracion">
+                <span class="icon wb-settings" aria-hidden="true"></span>
+            </a>
+            <a href="javascript: void(0);" data-placement="top" data-toggle="tooltip" data-original-title="Bloquear">
+                <span class="icon wb-eye-close" aria-hidden="true"></span>
+            </a>
+            <a href="javascript: void(0);" data-placement="top" data-toggle="tooltip" data-original-title="Cerrar Sesión">
+                <span class="icon wb-power" aria-hidden="true"></span>
+            </a>
+        </div>
+
+    </div>
+    <!-- SIDE MENU BAR-->
+    <!-- Page -->
+    <div class="page">
+        <div class="page-header">
+            <h1 class="page-title">Inicio</h1>
+            <a href="#" title="Dashboard">Inicio</a>
+            &gt;
+            Perfiles
+        </div>
+
+        <div class="page-content">
+            <div class="row" data-plugin="matchHeight" data-by-row="true">
+                <div class="col-xxl-12 col-lg-12">
+
+                    <!-- Tabla DATATABLE-->
+                    <div class="panel panel-dark panel-line" id="AyudaBody">
+                        <header class="panel-heading">
+                            <div class="panel-actions"></div>
+                            <h3 class="panel-title">Listado</h3>
+                            <div class="panel-actions">
+                                <a class="btn btn-tagged btn-info waves-effect waves-light pull-right font-size-16" href="#">
+                                    <span class="btn-tag"><i class="icon fa-key" aria-hidden="true"></i></span>Agregar Nuevo Perfil
+                                </a>
+                            </div>
+                        </header>
+                        <div class="panel-body">
+                            <table class="table table-hover table-striped w-full DataTable">
+                                <thead>
+                                    <tr>
+                                        <th>Perfil</th>
+                                        <th>Descripcion</th>
+                                        <th id="AyudaAccion">Acción</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Perfil</th>
+                                        <th>Descripcion</th>
+                                        <th>Acción</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    <tr>
+                                        <td>Administrador </td>
+                                        <td>Personal con derechos de administracion sobre la institucion. </td>
+                                        <td class="actions">
+                                            <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                                               data-toggle="tooltip" data-original-title="Editar"><i class="icon fa-edit" aria-hidden="true" style="font-size: 28px; color: #62A8EA;"></i></a>
+                                            <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row"
+                                               data-toggle="tooltip" data-original-title="Eliminar"><i class="icon fa-trash-o" aria-hidden="true" style="font-size: 28px; color: #F96868;"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Profesor</td>
+                                        <td>Personal que imparte las clases en la institucion  </td>
+                                        <td class="actions">
+                                            <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                                               data-toggle="tooltip" data-original-title="Editar"><i class="icon fa-edit" aria-hidden="true" style="font-size: 28px; color: #62A8EA;"></i></a>
+                                            <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row"
+                                               data-toggle="tooltip" data-original-title="Eliminar"><i class="icon fa-trash-o" aria-hidden="true" style="font-size: 28px; color: #F96868;"></i></a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End Page -->
+
+    <div class="site-action">
+        <button type="button" class="btn btn-floating btn-warning site-tour-trigger"><i class="icon fa-question-circle" aria-hidden="true"></i></button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="site-footer-legal">© 2018 <a href="#">NCLASSES</a></div>
+        <div class="site-footer-right">
+            Creado por <a href="#">NCLASSES, S.A</a>
+        </div>
+    </footer>
+    <!-- Core  -->
+    @Scripts.Render("~/bundles/Core")
+
+    <!-- Plugins -->
+    @Scripts.Render("~/bundles/Plugins")
+
+    <!-- Scripts -->
+    @Scripts.Render("~/bundles/Scripts")
+
+    <script>Config.set('assets', '~/Resources/assets');</script>
+
+    <!-- Page -->
+    @Scripts.Render("~/bundles/Page")
+
+    <!-- Datatable -->
+    @Scripts.Render("~/bundles/Datatable")
+
+    <!-- Tooltip -->
+    @Scripts.Render("~/bundles/Tooltip")
+
+    <!-- Galeria de Imagenes -->
+    @Scripts.Render("~/bundles/GaleriaImagenes")
+
+    <!-- Notificaciones timeline -->
+    @Scripts.Render("~/bundles/Notificacionestimeline")
+
+    <!-- Form -->
+    @Scripts.Render("~/bundles/Form")
+
+    <!-- Form Advanced -->
+    @Scripts.Render("~/bundles/FormAdvanced")
+
+    <!-- Custom -->
+    @Scripts.Render("~/bundles/Custom")
+</body>
+</html>

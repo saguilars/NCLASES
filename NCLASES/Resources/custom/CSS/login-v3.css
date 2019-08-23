@@ -1,0 +1,70 @@
+.page-login-v3 {
+    background-image: url("../../../Images/loginBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.login-register {
+    background: url(../../style/images/login-register.jpg) no-repeat center center / cover !important;
+    height: 100%;
+    position: fixed;
+}
+
+.page-login-v3 .panel {
+  width: 380px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: .286rem;
+}
+
+.page-login-v3 .panel .panel-body {
+  padding: 55px 40px 40px;
+}
+
+.page-login-v3 .panel .brand-text {
+  margin-top: 8px;
+}
+
+.page-login-v3 form {
+  margin: 45px 0 30px;
+}
+
+.page-login-v3 form a {
+  margin-left: 20px;
+}
+
+.page-login-v3 form .form-material.floating + .page-login-v3 form .form-material.floating {
+  margin-top: 30px;
+}
+
+.page-login-v3 form .form-material label {
+  font-weight: 300;
+  color: #a3afb7;
+}
+/*Custom*/
+.colorBlue {
+    color: #1072b0;
+}
+.page-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+.page-footer {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 479px) {
+    .page-login-v3 .page-content {
+    padding: 30px 20px;
+  }
+
+  .page-login-v3 .panel {
+    width: auto;
+    padding: 10px;
+  }
+
+  .page-login-v3 .panel .panel-body {
+    padding: 35px 25px;
+  }
+}
