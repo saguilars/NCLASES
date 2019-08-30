@@ -1,0 +1,16 @@
+
+
+.widget-tab {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 20px;
+  font-weight: normal;
+  color: #999;
+  background: #fcfcfc;
+  border: solid #ddd;
+  border-width: 1px 1px 0;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}

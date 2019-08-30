@@ -1,0 +1,120 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Software de Gestion Educativa">
+    <meta name="author" content="NCLASSES">
+
+    <title>Nclases | @ViewBag.Title</title>
+
+    <link rel="apple-touch-icon" href="../images/LOGONCLASSES.png">
+    <link rel="shortcut icon" href="../images/LOGO/ico_NCLASSES.ico">
+
+    <!-- Stylesheets -->
+    @Styles.Render("~/bundles/Stylesheets_CSS")
+    <!-- Plugins -->
+    @Styles.Render("~/bundles/Plugins_CSS")
+    <!-- Datatable -->
+    @Styles.Render("~/bundles/Datatable_CSS")
+
+    <!-- Personalizados -->
+    @Styles.Render("~/bundles/Personalizados_CSS")
+
+    <!-- Form Advance -->
+    @Styles.Render("~/bundles/FormAdvance_CSS")
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="~/Resources/global/fonts/weather-icons/weather-icons.css">
+    <link rel="stylesheet" href="~/Resources/global/fonts/web-icons/web-icons.min.css">
+    <link rel="stylesheet" href="~/Resources/global/fonts/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Resources/global/fonts/brand-icons/brand-icons.min.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+
+    <!-- Custom -->
+    @Styles.Render("~/bundles/Custom_CSS")
+
+
+    <script src="~/Resources/global/vendor/breakpoints/breakpoints.js"></script>
+    <script>
+        Breakpoints();
+    </script>
+</head>
+<body class="animsition dashboard">
+
+
+
+    <nav class="site-navbar navbar navbar-default navbar-inverse navbar-fixed-top navbar-mega bg-orange-500" role="navigation" id="AyudaBarraSuperior">
+        @Html.Partial("MenuBar")
+    </nav>
+
+
+    @Html.Partial("Menu")
+
+
+
+    <!-- Page -->
+    <div class="page">
+        <div class="page-header">
+            <h1 class="page-title">Inicio</h1>
+            <a href="#" title="Dashboard">Inicio</a>
+            &gt;
+            Perfiles
+        </div>
+        @RenderBody()
+
+    </div>
+    <!-- EndPage -->
+
+    <div class="site-action">
+        <button type="button" class="btn btn-floating btn-warning site-tour-trigger"><i class="icon fa-question-circle" aria-hidden="true"></i></button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="site-footer-legal">© 2018 <a href="#">NCLASSES</a></div>
+        <div class="site-footer-right">
+            Creado por <a href="#">NCLASSES, S.A</a>
+        </div>
+    </footer>
+    <!-- Core  -->
+    @Scripts.Render("~/bundles/Core_JS")
+
+    <!-- Plugins -->
+    @Scripts.Render("~/bundles/Plugins_JS")
+
+    <!-- Scripts -->
+    @Scripts.Render("~/bundles/Scripts_JS")
+
+    <script>Config.set('assets', '~/Resources/assets');</script>
+
+    <!-- Page -->
+    @Scripts.Render("~/bundles/Page_JS")
+
+    <!-- Datatable -->
+    @Scripts.Render("~/bundles/Datatable_JS")
+
+    <!-- Tooltip -->
+    @Scripts.Render("~/bundles/Tooltip_JS")
+
+    <!-- Galeria de Imagenes -->
+    @Scripts.Render("~/bundles/GaleriaImagenes_JS")
+
+    <!-- Notificaciones timeline -->
+    @Scripts.Render("~/bundles/Notificacionestimeline_JS")
+
+    <!-- Form -->
+    @Scripts.Render("~/bundles/Form_JS")
+
+    <!-- Form Advanced -->
+    @Scripts.Render("~/bundles/FormAdvanced_JS")
+
+    <!-- Custom -->
+    @Scripts.Render("~/bundles/Custom_JS")
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
