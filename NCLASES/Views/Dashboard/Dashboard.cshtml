@@ -1,7 +1,70 @@
 ﻿
 @{
     ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Dashboard</h2>
+<div class="page-content">
+    <div class="row" data-plugin="matchHeight" data-by-row="true">
+        <div class="col-xxl-12 col-lg-12">
+
+            <!-- Tabla DATATABLE-->
+            <div class="panel panel-dark panel-line" id="AyudaBody">
+                <header class="panel-heading">
+                    <div class="panel-actions"></div>
+                    <h3 class="panel-title">Listado</h3>
+                    <div class="panel-actions">
+                        <a class="btn btn-tagged btn-info waves-effect waves-light pull-right font-size-16" href="#">
+                            <span class="btn-tag"><i class="icon fa-key" aria-hidden="true"></i></span>Agregar Nuevo Perfil
+                        </a>
+                    </div>
+                </header>
+                <div class="panel-body">
+                    <table class="table table-hover table-striped w-full DataTable">
+                        <thead>
+                            <tr>
+                                <th>Perfil</th>
+                                <th>Descripcion</th>
+                                <th id="AyudaAccion">Acción</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Perfil</th>
+                                <th>Descripcion</th>
+                                <th>Acción</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td>Administrador </td>
+                                <td>Personal con derechos de administracion sobre la institucion. </td>
+                                <td class="actions">
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                                       data-toggle="tooltip" data-original-title="Editar"><i class="icon fa-edit" aria-hidden="true" style="font-size: 28px; color: #62A8EA;"></i></a>
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row"
+                                       data-toggle="tooltip" data-original-title="Eliminar"><i class="icon fa-trash-o" aria-hidden="true" style="font-size: 28px; color: #F96868;"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Profesor</td>
+                                <td>Personal que imparte las clases en la institucion  </td>
+                                <td class="actions">
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                                       data-toggle="tooltip" data-original-title="Editar"><i class="icon fa-edit" aria-hidden="true" style="font-size: 28px; color: #62A8EA;"></i></a>
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row"
+                                       data-toggle="tooltip" data-original-title="Eliminar"><i class="icon fa-trash-o" aria-hidden="true" style="font-size: 28px; color: #F96868;"></i></a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
 

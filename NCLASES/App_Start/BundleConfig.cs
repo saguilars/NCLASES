@@ -13,13 +13,13 @@ namespace NCLASES.App_Start
             bundles.IgnoreList.Clear();
 
             // CSS
-            bundles.Add(new StyleBundle("~/bundles/Stylesheets").Include(
+            bundles.Add(new StyleBundle("~/bundles/Stylesheets_CSS").Include(
                           "~/Resources/global/css/bootstrap.min.css",
                           "~/Resources/global/css/bootstrap-extend.min.css",
                           "~/Resources/assets/css/site.css"
                       ));
 
-            bundles.Add(new StyleBundle("~/bundles/Plugins").Include(
+            bundles.Add(new StyleBundle("~/bundles/Plugins_CSS").Include(
                         "~/Resources/global/vendor/animsition/animsition.css" ,
                         "~/Resources/global/vendor/asscrollable/asScrollable.css" ,
                         "~/Resources/global/vendor/switchery/switchery.css" ,
@@ -28,7 +28,7 @@ namespace NCLASES.App_Start
                         "~/Resources/global/vendor/flag-icon-css/flag-icon.css" 
                      ));
 
-            bundles.Add(new StyleBundle("~/bundles/Datatable").Include(
+            bundles.Add(new StyleBundle("~/bundles/Datatable_CSS").Include(
                         "~/Resources/global/vendor/datatables.net-bs4/dataTables.bootstrap4.css" ,
                         "~/Resources/global/vendor/datatables.net-fixedheader-bs4/dataTables.fixedheader.bootstrap4.css" ,
                         "~/Resources/global/vendor/datatables.net-fixedcolumns-bs4/dataTables.fixedcolumns.bootstrap4.css" ,
@@ -40,7 +40,7 @@ namespace NCLASES.App_Start
                         "~/Resources/assets/examples/css/tables/datatable.css" 
                       ));
 
-            bundles.Add(new StyleBundle("~/bundles/Personalizados").Include(
+            bundles.Add(new StyleBundle("~/bundles/Personalizados_CSS").Include(
                          //Estadistica con barra para profesor
                         "~/Resources/assets/examples/css/dashboard/analytics.css" ,
                         //Estadisticaindividual alumno
@@ -65,7 +65,7 @@ namespace NCLASES.App_Start
                         "~/Resources/global/vendor/plyr/plyr.css" 
                     ));
 
-            bundles.Add(new StyleBundle("~/bundles/FormAdvance").Include(
+            bundles.Add(new StyleBundle("~/bundles/FormAdvance_CSS").Include(
                         "~/Resources/global/vendor/select2/select2.css" ,
                         "~/Resources/global/vendor/bootstrap-tokenfield/bootstrap-tokenfield.css" ,
                         "~/Resources/global/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css" ,
@@ -88,7 +88,7 @@ namespace NCLASES.App_Start
                         "~/Resources/assets/examples/css/forms/advanced.css" 
                      ));
 
-            bundles.Add(new StyleBundle("~/bundles/Custom").Include(
+            bundles.Add(new StyleBundle("~/bundles/Custom_CSS").Include(
                         "~/Resources/Custom/CSS/orange.css" ,
                         //Spinner ,
                         "~/Resources/Custom/CSS/Spinner/book_flat.css" ,
@@ -100,7 +100,7 @@ namespace NCLASES.App_Start
 
 
             // JS
-            bundles.Add(new ScriptBundle("~/bundles/Core").Include(
+            bundles.Add(new ScriptBundle("~/bundles/Core_JS").Include(
                         "~/Resources/global/vendor/babel-external-helpers/babel-external-helpers.js" ,
                         "~/Resources/global/vendor/jquery/jquery.js" ,
                         "~/Resources/global/vendor/popper-js/umd/popper.min.js" ,
@@ -112,14 +112,14 @@ namespace NCLASES.App_Start
                         "~/Resources/global/vendor/ashoverscroll/jquery-asHoverScroll.js" 
                       ));
 
-            bundles.Add(new ScriptBundle("~/bundles/Plugins").Include(
+            bundles.Add(new ScriptBundle("~/bundles/Plugins_JS").Include(
                     "~/Resources/global/vendor/switchery/switchery.js" ,
                     "~/Resources/global/vendor/intro-js/intro.js" ,
                     "~/Resources/global/vendor/screenfull/screenfull.js" ,
                     "~/Resources/global/vendor/slidepanel/jquery-slidePanel.js" 
                    ));
 
-            bundles.Add(new ScriptBundle("~/bundles/Scripts").Include(
+            bundles.Add(new ScriptBundle("~/bundles/Scripts_JS").Include(
                     "~/Resources/global/js/Component.js" ,
                     "~/Resources/global/js/Plugin.js" ,
                     "~/Resources/global/js/Base.js" ,
@@ -133,14 +133,14 @@ namespace NCLASES.App_Start
                     "~/Resources/assets/js/config/tour.js" 
                    ));
 
-            bundles.Add(new ScriptBundle("~/bundles/Page").Include(
+            bundles.Add(new ScriptBundle("~/bundles/Page_JS").Include(
                     "~/Resources/assets/js/Site.js" ,
                     "~/Resources/global/js/Plugin/asscrollable.js" ,
                     "~/Resources/global/js/Plugin/slidepanel.js" ,
                     "~/Resources/global/js/Plugin/switchery.js" 
                    ));
 
-            bundles.Add(new ScriptBundle("~/bundles/Datatable").Include(
+            bundles.Add(new ScriptBundle("~/bundles/Datatable_JS").Include(
                     "~/Resources/global/vendor/datatables.net/jquery.dataTables.js" ,
                     "~/Resources/global/vendor/datatables.net-bs4/dataTables.bootstrap4.js" ,
                     "~/Resources/global/vendor/datatables.net-fixedheader/dataTables.fixedHeader.js" ,
@@ -160,7 +160,7 @@ namespace NCLASES.App_Start
                      "~/Resources/global/js/Plugin/datatables.js" 
                    ));
 
-            bundles.Add(new ScriptBundle("~/bundles/Tooltip").Include(
+            bundles.Add(new ScriptBundle("~/bundles/Tooltip_JS").Include(
                     "~/Resources/global/vendor/webui-popover/jquery.webui-popover.min.js" ,
                     "~/Resources/global/vendor/toolbar/jquery.toolbar.js" ,
                     "~/Resources/global/js/Plugin/webui-popover.js" ,
@@ -168,26 +168,26 @@ namespace NCLASES.App_Start
                     "~/Resources/assets/examples/js/uikit/tooltip-popover.js" 
                    ));
 
-            bundles.Add(new ScriptBundle("~/bundles/GaleriaImagenes").Include(
+            bundles.Add(new ScriptBundle("~/bundles/GaleriaImagenes_JS").Include(
                     "~/Resources/global/vendor/magnific-popup/jquery.magnific-popup.js" ,
                     "~/Resources/global/js/Plugin/magnific-popup.js" ,
                     "~/Resources/assets/examples/js/advanced/lightbox.js" 
                    ));
 
-            bundles.Add(new ScriptBundle("~/bundles/Notificacionestimeline").Include(
+            bundles.Add(new ScriptBundle("~/bundles/Notificacionestimeline_JS").Include(
                      "~/Resources/global/vendor/jquery-appear/jquery.appear.js" ,
                     "~/Resources/global/vendor/plyr/plyr.js" ,
                     "~/Resources/global/js/Plugin/plyr.js" ,
                     "~/Resources/assets/examples/js/structure/timeline.js" 
                   ));
 
-            bundles.Add(new ScriptBundle("~/bundles/Form").Include(
+            bundles.Add(new ScriptBundle("~/bundles/Form_JS").Include(
                     "~/Resources/global/vendor/jquery-placeholder/jquery.placeholder.js" ,
                     "~/Resources/global/js/Plugin/jquery-placeholder.js" ,
                     "~/Resources/global/js/Plugin/input-group-file.js" 
                   ));
 
-            bundles.Add(new ScriptBundle("~/bundles/FormAdvanced").Include(
+            bundles.Add(new ScriptBundle("~/bundles/FormAdvanced_JS").Include(
                     "~/Resources/global/vendor/select2/select2.full.min.js" ,
                     "~/Resources/global/vendor/bootstrap-tokenfield/bootstrap-tokenfield.min.js" ,
                     "~/Resources/global/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js" ,
@@ -240,7 +240,7 @@ namespace NCLASES.App_Start
                     "~/Resources/assets/examples/js/forms/advanced.js" 
                   ));
                         
-            bundles.Add(new ScriptBundle("~/bundles/Custom").Include(
+            bundles.Add(new ScriptBundle("~/bundles/Custom_JS").Include(
                    "~/Resources/Custom/JS/DataTableNTablaBasica.js" ,
                     "~/Resources/Custom/JS/DataTableCustom.js" ,
                     "~/Resources/Custom/JS/TOUR/Index-Tour.js" 

@@ -144,10 +144,24 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <Content Include="Global.asax" />
+    <Content Include="Images\defaultuser.png" />
     <Content Include="Images\loginBackground.jpg" />
     <Content Include="Images\LOGO\favicon.ico" />
     <Content Include="Images\LOGO\logoadmin.png" />
     <Content Include="Images\LOGO\LogoLogin.png" />
+    <Content Include="Images\PORTADAS\portada1.jpg" />
+    <Content Include="Images\PORTADAS\portada10.png" />
+    <Content Include="Images\PORTADAS\portada11.jpg" />
+    <Content Include="Images\PORTADAS\portada12.jpg" />
+    <Content Include="Images\PORTADAS\portada2.jpg" />
+    <Content Include="Images\PORTADAS\portada3.png" />
+    <Content Include="Images\PORTADAS\portada4.jpg" />
+    <Content Include="Images\PORTADAS\portada4.png" />
+    <Content Include="Images\PORTADAS\portada5.jpg" />
+    <Content Include="Images\PORTADAS\portada6.png" />
+    <Content Include="Images\PORTADAS\portada7.png" />
+    <Content Include="Images\PORTADAS\portada8.png" />
+    <Content Include="Images\PORTADAS\portada9.jpg" />
     <Content Include="Resources\assets\css\site.css" />
     <Content Include="Resources\assets\css\site.min.css" />
     <Content Include="Resources\assets\examples\css\advanced\alertify.css" />
@@ -5328,6 +5342,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Dashboard\Dashboard.cshtml" />
+    <Content Include="Views\Shared\MenuBar.cshtml" />
+    <Content Include="Views\Shared\Menu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
