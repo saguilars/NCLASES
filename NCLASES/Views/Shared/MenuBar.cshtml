@@ -11,23 +11,18 @@
     </button>
 
     <!--OJO REVISAR CUAL ES LA MEJOR OPCION-->
-    <!-- Opcion 1
-    <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
-       <img class="navbar-brand-logo" src="../images/LOGO/logo_NCLASSES.png" title="NCLASSES">
-       <span class="navbar-brand-text hidden-xs-down">Software Gestion Educativa</span>
-    </div>-->
-    <!-- Opcion 2 -->
-    <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
-        <img class="navbar-brand-logo" src="@Url.Content("~/images/LOGO/logo_NCLASSES_blanco.png")" title="NCLASSES">
-        <span class="navbar-brand-text hidden-xs-down" style="font-size: 16px;">Software Gestion Educativa</span>
-    </div>
-    <!-- Opcion 3
-     <div class="navbar-brand navbar-brand-center">
-       <a>
-           <img class="navbar-brand-logo" src="../images/LOGO/LOGONCLASSES.png" style="border-radius: 50px; background-color:#fff;" title="NCLASSES">
-           <span class="navbar-brand-text blue-grey-100 hidden-xs-down">Software Gestion Educativa</span>
-       </a>
-     </div>-->
+    <!-- Opcion 1-->
+        <div class="text-center">
+            <img class="navbar-brand-logo" src="@Url.Content("~/images/LOGO/LOGO_NCLASES_blanco.png")" title="">
+            <label class="form-control-label font-weight-400 grey-100 font-size-20">NCLASES</label>
+        </div>
+    <!-- Opcion 2-->
+        @*<div class="navbar-brand navbar-brand-center">
+            <a>
+                <img class="navbar-brand-logo" src="@Url.Content("~/images/LOGO/LOGO_NCLASES_color.png")" style="border-radius: 70px; background-color:#fff;" title="NCLASSES">
+                <label class="form-control-label font-weight-400 grey-100 font-size-20">NCLASES</label>
+            </a>
+        </div>*@
     <!--OJO REVISAR CUAL ES LA MEJOR OPCION-->
 
 
@@ -87,17 +82,17 @@
                 <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false"
                    data-animation="scale-up" role="button">
                     <span class="avatar avatar-online">
-                        <img src="~/Resources/global/portraits/15.jpg" alt="...">
+                        <img src="@Url.Content("~/Resources/global/portraits/1.jpg")" alt="...">
                     </span>
-                    <label class="form-control-label font-weight-400 grey-100 font-size-18">Alejandra Marcela</label>
+                    <label class="form-control-label font-weight-400 grey-700 font-size-14">Alejandro Aguilar</label>
                     <i class="icon wb-chevron-down-mini" aria-hidden="true"></i>
                 </a>
                 <div class="dropdown-menu" role="menu">
                     <a class="dropdown-item" href="#" role="menuitem">
                         <span class="avatar avatar-sm">
-                            <img src="~/Resources/global/portraits/15.jpg" alt="..." />
+                            <img src="@Url.Content("~/Resources/global/portraits/1.jpg")" alt="..." />
                         </span>
-                        Alejandra Marcela
+                        Alejandro Aguilar
                     </a>
                 </div>
             </li>
@@ -106,7 +101,7 @@
         <!-- Navbar Toolbar Right -->
         <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
             <li class="nav-item dropdown">
-                <label class="form-control-label font-weight-400 grey-100 font-size-18" style="padding-top:18px" id="LabelNombreUsuario">Hola, Santiago Aguilar</label>
+                <label class="form-control-label font-weight-400 grey-700 font-size-14" style="padding-top:22px" id="LabelNombreUsuario">Hola, Santiago Aguilar</label>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" data-animation="scale-up"
@@ -207,87 +202,7 @@
                         </a>
                     </div>
                 </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" title="Messages"
-                   aria-expanded="false" data-animation="scale-up" role="button">
-                    <i class="icon wb-envelope" aria-hidden="true"></i>
-                    <span class="badge badge-pill badge-info up">3</span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
-                    <div class="dropdown-menu-header" role="presentation">
-                        <h5>MENSAJES</h5>
-                        <span class="badge badge-round badge-info">Nuevo 3</span>
-                    </div>
-
-                    <div class="list-group" role="presentation">
-                        <div data-role="container">
-                            <div data-role="content">
-                                <a class="list-group-item" href="javascript:void(0)" role="menuitem">
-                                    <div class="media">
-                                        <div class="pr-10">
-                                            <span class="avatar avatar-sm avatar-online">
-                                                <img src="~/Resources/global/portraits/2.jpg" alt="..." />
-                                                <i></i>
-                                            </span>
-                                        </div>
-                                        <div class="media-body">
-                                            <h6 class="media-heading">Mary Adams</h6>
-                                            <div class="media-meta">
-                                                <time datetime="2018-06-17T20:22:05+08:00">hace 30 minutos</time>
-                                            </div>
-                                            <div class="media-detail">El estudiante presenta problemas con clase de matematicas</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="list-group-item" href="javascript:void(0)" role="menuitem">
-                                    <div class="media">
-                                        <div class="pr-10">
-                                            <span class="avatar avatar-sm avatar-off">
-                                                <img src="~/Resources/global/portraits/3.jpg" alt="..." />
-                                                <i></i>
-                                            </span>
-                                        </div>
-                                        <div class="media-body">
-                                            <h6 class="media-heading">Caleb Richards</h6>
-                                            <div class="media-meta">
-                                                <time datetime="2018-06-17T12:30:30+08:00">hace 2 horas</time>
-                                            </div>
-                                            <div class="media-detail">La reunion sera pospuesta para la otra semana</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="list-group-item" href="javascript:void(0)" role="menuitem">
-                                    <div class="media">
-                                        <div class="pr-10">
-                                            <span class="avatar avatar-sm avatar-busy">
-                                                <img src="~/Resources/global/portraits/4.jpg" alt="..." />
-                                                <i></i>
-                                            </span>
-                                        </div>
-                                        <div class="media-body">
-                                            <h6 class="media-heading">June Lane</h6>
-                                            <div class="media-meta">
-                                                <time datetime="2018-06-16T18:38:40+08:00">hace 2 dias</time>
-                                            </div>
-                                            <div class="media-detail">El evento sera en 1 dia</div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dropdown-menu-footer" role="presentation">
-                        <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
-                            <i class="icon wb-settings" aria-hidden="true"></i>
-                        </a>
-                        <a class="dropdown-item" href="javascript:void(0)" role="menuitem">
-                            Ver Todos los Mensajes
-                        </a>
-                    </div>
-                </div>
-            </li>
+            </li>            
         </ul>
         <!-- End Navbar Toolbar Right -->
     </div>
@@ -307,3 +222,4 @@
     </div>
     <!-- End Site Navbar Seach -->
 </div>
+

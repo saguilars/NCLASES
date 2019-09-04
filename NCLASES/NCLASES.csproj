@@ -149,6 +149,8 @@
     <Content Include="Images\LOGO\favicon.ico" />
     <Content Include="Images\LOGO\logoadmin.png" />
     <Content Include="Images\LOGO\LogoLogin.png" />
+    <Content Include="Images\LOGO\LOGO_NCLASES_blanco.png" />
+    <Content Include="Images\LOGO\LOGO_NCLASES_color.png" />
     <Content Include="Images\PORTADAS\portada1.jpg" />
     <Content Include="Images\PORTADAS\portada10.png" />
     <Content Include="Images\PORTADAS\portada11.jpg" />
@@ -508,7 +510,7 @@
     <Content Include="Resources\assets\skins\yellow.css" />
     <Content Include="Resources\assets\skins\yellow.min.css" />
     <Content Include="Resources\custom\CSS\login-v3.css" />
-    <Content Include="Resources\custom\CSS\orange.css" />
+    <Content Include="Resources\custom\CSS\blue.css" />
     <Content Include="Resources\custom\CSS\RotarColumnasTablas.css" />
     <Content Include="Resources\custom\CSS\Spinner\book_flat.css" />
     <Content Include="Resources\custom\CSS\Spinner\book_full.css" />
