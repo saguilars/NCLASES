@@ -125,11 +125,10 @@ tr:nth-child(even){background-color: #e4eaec}
   white-space: nowrap;
 }
 
-header
-{
-  font-family: 'Lobster', cursive;
-  text-align: center;
-  font-size: 25px;  
+header {
+    
+    text-align: center;
+    font-size: 25px;
 }
 
 #info

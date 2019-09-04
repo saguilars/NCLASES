@@ -1,0 +1,190 @@
+﻿
+@{
+    ViewBag.Title = "Asistencia";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-content">
+    <div class="row" data-plugin="matchHeight" data-by-row="true">
+        <div class="col-xxl-12 col-lg-12">
+
+            <!-- Asistencias-->
+            <div class="panel panel-dark panel-line">
+                <header class="panel-heading">
+                    <div class="panel-actions"></div>
+                    <h3 class="panel-title">Tablas columnas diagonales</h3>
+                    <div class="panel-actions">
+                        <a class="btn btn-tagged btn-primary waves-effect waves-light font-size-16" href="#" data-target="#AddAsistencia" data-toggle="modal" id="AnadirAsistencia">
+                            <span class="btn-tag"><i class="icon fa-plus" aria-hidden="true"></i></span>Añadir
+                        </a>
+                        <a class="btn btn-tagged btn-success waves-effect waves-light font-size-16" href="#" id="GuardarAsistencia">
+                            <span class="btn-tag"><i class="icon fa-save" aria-hidden="true"></i></span>Guardar
+                        </a>
+                    </div>
+                </header>
+                <div class="panel-body">
+
+                    <div class="scrollbar" id="style-2">
+                        <div class="force-overflow">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!-- Tabla para columnas diagonales-->
+                                    <table class="table-header-rotated table-striped table-hover table-striped-column addcolumntable">
+                                        <col width="250">
+                                        <col width="40">
+                                        <thead>
+                                            <tr>
+                                                <th class="row-header font-size-18 blue-grey-700">Estudiantes</th>
+                                                <!-- Following headers are rotated -->
+                                                <th class="rotate-45"><div data-target="#AddAsistencia" data-toggle="modal"><span><i class="icon fa-plus" aria-hidden="true"></i> Agregar </span></div></th>
+                                                <th class="rotate-45"><div><span><i class="icon fa-calendar" aria-hidden="true"></i> Lunes 01</span></div></th>
+                                                <th class="rotate-45"><div><span><i class="icon fa-calendar" aria-hidden="true"></i> Martes 02 </span></div></th>
+                                                <th class="rotate-45"><div><span><i class="icon fa-calendar" aria-hidden="true"></i> Mierc 03</span></div></th>
+                                                <th class="rotate-45"><div><span><i class="icon fa-calendar" aria-hidden="true"></i> Jueves 04 </span></div></th>
+                                                <th class="rotate-45"><div><span><i class="icon fa-calendar" aria-hidden="true"></i> Viernes 05 </span></div></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <br>
+                                                    <!-- Search Panel -->
+                                                    <div class="input-search input-group-sm">
+                                                        <i class="input-search-icon fa-filter red-600" aria-hidden="true"></i>
+                                                        <input type="text" class="form-control" name="" placeholder="Filtrar..." onkeyup="" id="FiltroAlumno">
+                                                    </div>
+                                                    <br>
+                                                    <!-- End Search Panel -->
+                                                </td>
+                                                <td class="row-body"> </td>
+                                                <td class="row-body">  <button type="button" class="btn btn-icon btn-pure btn-primary"><i class="icon fa-pencil-square-o green-600" aria-hidden="true" style="font-size: 20px;"></i></button></td>
+                                                <td class="row-body">  <button type="button" class="btn btn-icon btn-pure btn-primary"><i class="icon fa-pencil-square-o green-600" aria-hidden="true" style="font-size: 20px;"></i></button> </td>
+                                                <td class="row-body">  <button type="button" class="btn btn-icon btn-pure btn-primary"><i class="icon fa-pencil-square-o green-600" aria-hidden="true" style="font-size: 20px;"></i></button> </td>
+                                                <td class="row-body">  <button type="button" class="btn btn-icon btn-pure btn-primary"><i class="icon fa-pencil-square-o green-600" aria-hidden="true" style="font-size: 20px;"></i></button> </td>
+                                                <td class="row-body">  <button type="button" class="btn btn-icon btn-pure btn-primary"><i class="icon fa-pencil-square-o green-600" aria-hidden="true" style="font-size: 20px;"></i></button> </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font-size-18 blue-grey-700">Obama, Barak</td>
+                                                <td class="row-body"></td>
+                                                <td class="row-body"></td>
+                                                <td class="row-body"></td>
+                                                <td class="row-body"></td>
+                                                <td class="row-body"></td>
+                                                <td class="row-body"><i class="icon fa-times-circle" aria-hidden="true" style="color:#FAA700;"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font-size-18 blue-grey-700">Regan, Ronald</td>
+                                                <td class="row-body "></td>
+                                                <td class="row-body "></td>
+                                                <td class="row-body "></td>
+                                                <td class="row-body "></td>
+                                                <td class="row-body "><i class="icon fa-times-circle" aria-hidden="true" style="color:#E62020;"></i></td>
+                                                <td class="row-body "></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font-size-18 blue-grey-700">Washington, George</td>
+                                                <td class="row-body"></td>
+                                                <td class="row-body"></td>
+                                                <td class="row-body"><i class="icon fa-times-circle" aria-hidden="true" style="color:#FAA700;"></i></td>
+                                                <td class="row-body"><i class="icon fa-times-circle" aria-hidden="true" style="color:#E62020;"></i></td>
+                                                <td class="row-body"></td>
+                                                <td class="row-body "></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font-size-18 blue-grey-700">Marcela Aguilar</td>
+                                                <td class="row-body"></td>
+                                                <td class="row-body"></td>
+                                                <td class="row-body"></td>
+                                                <td class="row-body"></td>
+                                                <td class="row-body"></td>
+                                                <td class="row-body "></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <!-- FIN Asistencias -->
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade modal-primary" id="AddAsistencia" aria-hidden="true"
+     aria-labelledby="AddAsistencia" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">Añadir Nueva Fecha de Asistencia</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="example">
+                    <div class="form-group">
+                        <label class="form-control-label" for="inputUserName">Seleccionar Parcial</label>
+                        <select class="form-control" data-plugin="select2" data-allow-clear="true">
+                            <option></option>
+                            <optgroup label="Semestre 1">
+                                <option value="S1P1">Parcial 1</option>
+                                <option value="S1P2">Parcial 2</option>
+                                <option value="S1P3">Parcial 3</option>
+                                <option value="S1P4">Parcial 4</option>
+                            </optgroup>
+                            <optgroup label="Semestre 2">
+                                <option value="S2P1">Parcial 1</option>
+                                <option value="S2P2">Parcial 2</option>
+                                <option value="S2P3">Parcial 3</option>
+                                <option value="S2P4">Parcial 4</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="example">
+                    <div class="form-group">
+                        <label class="form-control-label" for="inputUserName">Seleccionar Fecha</label>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="icon wb-calendar" aria-hidden="true"></i>
+                            </span>
+                            <input type="text" class="form-control" data-plugin="datepicker" id="col">
+                            <!-- <button id="icol">Insertar Columna</button> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="example">
+                    <div class="form-group">
+                        <label class="form-control-label" for="inputUserName">Agregar Descripcion</label>
+                        <div class="form-group">
+                            <textarea class="form-control" style="margin-top: 0px; margin-bottom: 0px; height: 61px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="icol" data-dismiss="modal">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIN Modal -->
+
+@section Scripts
+{
+    <script src="@Url.Content("~/Resources/Custom/JS/Asistencia.js")"></script>
+}
+

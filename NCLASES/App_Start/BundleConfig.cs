@@ -89,7 +89,7 @@ namespace NCLASES.App_Start
                      ));
 
             bundles.Add(new StyleBundle("~/bundles/Custom_CSS").Include(
-                        "~/Resources/Custom/CSS/orange.css" ,
+                        "~/Resources/Custom/CSS/blue.css" ,
                         //Spinner ,
                         "~/Resources/Custom/CSS/Spinner/book_flat.css" ,
                         "~/Resources/Custom/CSS/Spinner/book_full.css" ,
