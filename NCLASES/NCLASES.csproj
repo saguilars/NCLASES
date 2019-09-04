@@ -515,6 +515,7 @@
     <Content Include="Resources\custom\CSS\Spinner\book_flat.css" />
     <Content Include="Resources\custom\CSS\Spinner\book_full.css" />
     <Content Include="Resources\custom\CSS\Tabs\TabsPrincipal.css" />
+    <Content Include="Resources\custom\JS\Asistencia.js" />
     <Content Include="Resources\custom\JS\DataTableAddColumn.js" />
     <Content Include="Resources\custom\JS\DataTableCustom.js" />
     <Content Include="Resources\custom\JS\DataTableNTablaBasica.js" />
@@ -4449,6 +4450,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\ReactConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AsistenciaController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
@@ -5346,6 +5348,7 @@
     <Content Include="Views\Dashboard\Dashboard.cshtml" />
     <Content Include="Views\Shared\MenuBar.cshtml" />
     <Content Include="Views\Shared\Menu.cshtml" />
+    <Content Include="Views\Asistencia\Asistencia.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
