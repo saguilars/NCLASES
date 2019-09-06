@@ -49,7 +49,7 @@ $('#icol').click(function(){
       //Recorrer todos los tr de la tabla y en la tercera columna agregar el encabezado y los checkbox seleccionados.
        $('.addcolumntable').find('tr').each(function(){ 
         //Encabezado de la tabla que se agrega como columna que rota 45 grados, debe contener un nombre unico para identificarse entre las otras columnas.
-        $(this).find('th').eq(1).after("<th class='rotate-45'><div><span><i class='icon fa-calendar' aria-hidden='true'></i>" + $('#col').val() + "</span></div></th>");
+           $(this).find('th').eq(1).after("<th class='rotate-45'><div><span>" + getDayOfWeek($('#col').val()) + "</span></div></th>");
         $(this).find('td').eq(1).after('<td class="row-body" style="padding:5px;">\
                       <li class="list-inline-item EditarAsistencia'+ $('#col').val() +'"">\
                         <div class="checkbox-custom checkbox-success">\
@@ -61,7 +61,7 @@ $('#icol').click(function(){
                     </td>'); 
        
         //Dejar fijo el ancho de la primera columna, especificamente la busqueda del filtro.
-        $('#FiltroAlumno').css('width','400px');
+        $('#FiltroAlumno').css('width','350px');
       });
 
         //Habilitar y mostrar boton de guardar
@@ -109,6 +109,18 @@ $('#GuardarAsistencia').click(function(){
     });
 
 });
+
+
+function getDayOfWeek(date) {
+    //var fecha = new Date(date);
+    var dateParts = date.split("/");
+    var fecha = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
+
+    var dayOfWeek = new Date(fecha).getDay();
+    var day = isNaN(dayOfWeek) ? null : ['Domingo', 'Lunes', 'Martes', 'Mierc.', 'Jueves', 'Viernes', 'Sabado'][dayOfWeek];
+    var dateday = day + " " + fecha.getDate() + "/" + (fecha.getMonth() + 1);
+    return dateday 
+}
 
 
 

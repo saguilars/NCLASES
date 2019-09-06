@@ -231,7 +231,6 @@ namespace NCLASES.App_Start
                     "~/Resources/global/js/Plugin/bootstrap-touchspin.js" ,
                     "~/Resources/global/js/Plugin/card.js" ,
                     "~/Resources/global/js/Plugin/jquery-labelauty.js" ,
-                    "~/Resources/global/js/Plugin/bootstrap-datepicker.js" ,
                     "~/Resources/global/js/Plugin/jt-timepicker.js" ,
                     "~/Resources/global/js/Plugin/datepair.js" ,
                     "~/Resources/global/js/Plugin/jquery-strength.js" ,
@@ -241,6 +240,7 @@ namespace NCLASES.App_Start
                   ));
                         
             bundles.Add(new ScriptBundle("~/bundles/Custom_JS").Include(
+                    "~/Resources/Custom/JS/bootstrap-datepicker.js",
                    "~/Resources/Custom/JS/DataTableNTablaBasica.js" ,
                     "~/Resources/Custom/JS/DataTableCustom.js" ,
                     "~/Resources/Custom/JS/TOUR/Index-Tour.js" 

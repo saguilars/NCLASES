@@ -516,6 +516,7 @@
     <Content Include="Resources\custom\CSS\Spinner\book_full.css" />
     <Content Include="Resources\custom\CSS\Tabs\TabsPrincipal.css" />
     <Content Include="Resources\custom\JS\Asistencia.js" />
+    <Content Include="Resources\custom\JS\bootstrap-datepicker.js" />
     <Content Include="Resources\custom\JS\DataTableAddColumn.js" />
     <Content Include="Resources\custom\JS\DataTableCustom.js" />
     <Content Include="Resources\custom\JS\DataTableNTablaBasica.js" />

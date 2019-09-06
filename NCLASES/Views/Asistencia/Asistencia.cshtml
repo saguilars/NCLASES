@@ -30,18 +30,18 @@
                                 <div class="col-lg-12">
                                     <!-- Tabla para columnas diagonales-->
                                     <table class="table-header-rotated table-striped table-hover table-striped-column addcolumntable">
-                                        <col width="250">
-                                        <col width="40">
+                                        @*<col width="250">
+                                            <col width="40">*@
                                         <thead>
                                             <tr>
                                                 <th class="row-header font-size-18 blue-grey-700">Estudiantes</th>
                                                 <!-- Following headers are rotated -->
                                                 <th class="rotate-45"><div data-target="#AddAsistencia" data-toggle="modal"><span><i class="icon fa-plus" aria-hidden="true"></i> Agregar </span></div></th>
-                                                <th class="rotate-45"><div><span><i class="icon fa-calendar" aria-hidden="true"></i> Lunes 01</span></div></th>
-                                                <th class="rotate-45"><div><span><i class="icon fa-calendar" aria-hidden="true"></i> Martes 02 </span></div></th>
-                                                <th class="rotate-45"><div><span><i class="icon fa-calendar" aria-hidden="true"></i> Mierc 03</span></div></th>
-                                                <th class="rotate-45"><div><span><i class="icon fa-calendar" aria-hidden="true"></i> Jueves 04 </span></div></th>
-                                                <th class="rotate-45"><div><span><i class="icon fa-calendar" aria-hidden="true"></i> Viernes 05 </span></div></th>
+                                                <th class="rotate-45"><div><span> Lunes 01/10</span></div></th>
+                                                <th class="rotate-45"><div><span> Martes 02/10 </span></div></th>
+                                                <th class="rotate-45"><div><span> Mierc. 03/10</span></div></th>
+                                                <th class="rotate-45"><div><span> Jueves 04/10 </span></div></th>
+                                                <th class="rotate-45"><div><span> Viernes 05/10 </span></div></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -70,7 +70,7 @@
                                                 <td class="row-body"></td>
                                                 <td class="row-body"></td>
                                                 <td class="row-body"></td>
-                                                <td class="row-body"><i class="icon fa-times-circle" aria-hidden="true" style="color:#FAA700;"></i></td>
+                                                <td class="row-body"><div data-target="#AddInasistencia" data-toggle="modal"><span><i class="icon fa-times-circle" aria-hidden="true" style="color:#FAA700;"></i></span></div></td>
                                             </tr>
                                             <tr>
                                                 <td class="font-size-18 blue-grey-700">Regan, Ronald</td>
@@ -119,9 +119,8 @@
 
 </div>
 
-<!-- Modal -->
-<div class="modal fade modal-primary" id="AddAsistencia" aria-hidden="true"
-     aria-labelledby="AddAsistencia" role="dialog" tabindex="-1">
+<!-- Modal Guardar nueva asistencia-->
+<div class="modal fade modal-primary" id="AddAsistencia" aria-hidden="true" aria-labelledby="AddAsistencia" role="dialog" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -181,7 +180,85 @@
         </div>
     </div>
 </div>
-<!-- FIN Modal -->
+<!-- FIN Modal Guardar nueva asistencia-->
+
+<!-- Modal Justificar inasistencia-->
+<div class="modal fade modal-primary" id="AddInasistencia" aria-hidden="true" aria-labelledby="AddInasistencia" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">Justificar Inasistencia</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="example">
+                    <div class="form-group">
+                        <label class="form-control-label" for="inputUserName">Asistencia</label>
+                        <div class="example">
+                            <select data-plugin="selectpicker" title="Seleccionar Elemento">
+                                <option></option>
+                                <option data-icon="fa-user-plus font-size-20" class="green-800">Presente</option>
+                                <option data-icon="fa-user font-size-20" class="yellow-800">Atraso</option>
+                                <option data-icon="fa-user-times font-size-20" class="red-800">Falta</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example">
+                    <div class="form-group">
+                        <label class="form-control-label" for="inputUserName">Tipo de Asistencia</label>
+                        <div class="example">
+                            <select data-plugin="selectpicker" title="Seleccionar Elemento">
+                                <option></option>
+                                <option data-icon="fa-check-circle font-size-20" class="yellow-800">Justificada</option>
+                                <option data-icon="fa-times-circle font-size-20" class="red-800">Injustificada</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example">
+                    <div class="form-group">
+                        <label class="form-control-label" for="inputUserName">Adjuntar Archivo</label>
+                        <div class="form-group">
+                            <div class="input-group input-group-file" data-plugin="inputGroupFile">
+                                <input type="text" class="form-control" readonly="">
+                                <span class="input-group-btn">
+                                    <span class="btn btn-success btn-file">
+                                        <i class="icon wb-upload" aria-hidden="true"></i>
+                                        <input type="file" name="" multiple="">
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="example">
+                    <div class="form-group">
+                        <label class="form-control-label" for="inputUserName">Agregar Observaciones</label>
+                        <div class="form-group">
+                            <textarea class="form-control" style="margin-top: 0px; margin-bottom: 0px; height: 61px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="icol" data-dismiss="modal">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIN Modal Justificar inasistencia-->
+
+
 
 @section Scripts
 {
