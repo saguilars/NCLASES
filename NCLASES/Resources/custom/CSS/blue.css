@@ -9666,3 +9666,8 @@ a.list-group-item-dark.active, button.list-group-item-dark.active {
 .select2-container--default .select2-selection--single  {
     border-color: #56a9c5 !important;
 }
+
+.btn-group > .btn:first-child {
+    margin-left: 0;
+    border-color: #56a9c5;
+}
