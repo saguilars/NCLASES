@@ -44,55 +44,7 @@ $(document).ready(function(){
         var idEditarInasistencia = $(this).attr('id');        
         $('#AddInasistencia').modal('show');
         $("#AsistenciaSeleccionada").val(idEditarInasistencia);
-    });
-
-
-    //Cuando se presiona el boton de eliminar
-    $("#TblAsistencia th").click(function () {
-        var iIndex = $(this).closest("th").prevAll("th").length;
-        if (iIndex != 0 && iIndex != 1) {
-            $(this).parents("#TblAsistencia").find("tr").each(function () {
-                $(this).find("td:eq(" + iIndex + ")").remove();
-                $(this).find("th:eq(" + iIndex + ")").remove();
-            });
-        }       
-    });
-
-    ////Cuando se presiona el boton de eliminar
-    //$('body').on('click', '.EliminarAsistencia', function () {
-    //    //var indexToRemove = $(this).index();
-    //    //$(".addcolumntable tbody tr").each(function () {
-    //    //    $(this).find('th:eq(' + indexToRemove + '),td:eq(' + indexToRemove + ')').remove();
-    //    //});
-
-
-    //    //var table = document.getElementById("TblAsistencia"), rIndex, cIndex;
-    //    //// table rows
-    //    //for (var i = 1; i < table.rows.length; i++) {
-    //    //    // row cells
-    //    //    for (var j = 0; j < table.rows[i].cells.length; j++) {
-    //    //        table.rows[i].cells[j].onclick = function () {
-    //    //            rIndex = this.parentElement.rowIndex;
-    //    //            cIndex = this.cellIndex;
-    //    //            if (rIndex == 1)
-    //    //            {
-    //    //                $('.addcolumntable tr').find('th:eq(' + cIndex + '),td:eq(' + cIndex + ')').remove();
-    //    //            }                    
-    //    //        };
-    //    //    }
-    //    //}
-        
-    //    //var idEliminarInasistencia = $(this).attr('id');
-    //    //var target = $('.addcolumntable').find('button[id="' + idEliminarInasistencia + '"]');
-    //    //var td = $(this).closest('tr').find('td');
-    //    //var index = (td).index();
-    //    //$('.addcolumntable tr').find('th:eq(' + index + '),td:eq(' + index + ')').remove();        
-    //});
-
-
-    //if (!$.browser.webkit) {
-    //          $('.wrapper').html('<p>Sorry! Non webkit users. :(</p>');
-    //      }
+    }); 
 });
 
 
@@ -102,7 +54,7 @@ $('#icol').click(function(){
       //Recorrer todos los tr de la tabla y en la tercera columna agregar el encabezado y los checkbox seleccionados.
        $('.addcolumntable').find('tr').each(function(){ 
         //Encabezado de la tabla que se agrega como columna que rota 45 grados, debe contener un nombre unico para identificarse entre las otras columnas.
-           $(this).find('th').eq(1).after("<th class='rotate-45'><div><span><i class='icon fa-close' aria-hidden='true' style='font-size: 15px;'></i>" + getDayOfWeek($('#col').val()) + "</span></div></th>");
+           $(this).find('th').eq(1).after("<th class='rotate-45'><div><span>" + getDayOfWeek($('#col').val()) + "</span></div></th>");
             $(this).find('td').eq(1).after('<td class="row-body" style="padding:5px;">\
                       <li class="list-inline-item EditarAsistencia'+ $('#col').val() +'"">\
                         <div class="checkbox-custom checkbox-success">\
@@ -131,6 +83,10 @@ $('#icol').click(function(){
 
     //Modificar el primer valor por el boton de  editar y agregar el identificador unico de cada columna
     $('.addcolumntable tr td:eq(2)').replaceWith("<td class='row-body'>\
+                                                  <button type='button' class='btn btn-icon btn-pure btn-primary EliminarAsistencia' id='EliminarAsistencia" + $('#col').val() + "'>\
+                                                    <i class='icon fa-close red-600' aria-hidden='true' style='font-size: 15px;'>\
+                                                    </i>\
+                                                  </button></br>\
                                                   <button type='button' class='btn btn-icon btn-pure btn-primary EditarAsistencia' id='EditarAsistencia" + $('#col').val() + "'>\
                                                     <i class='icon fa-pencil-square-o green-600' aria-hidden='true' style='font-size: 15px;'>\
                                                     </i>\
@@ -200,10 +156,17 @@ $('#GuardarInasistencia').click(function () {
     });   
 });
 
-//function EliminarAsistencia(r) {
-//    var i = r.cellIndex;
-//    $('.addcolumntable tr').find('th:eq(' + i + '),td:eq(' + i + ')').remove();
-//}
+$("#TblAsistencia").on("click", ".EliminarAsistencia", function () {
+       var iIndex = $(this).closest("td").prevAll("td").length;
+        if (iIndex != 0 && iIndex != 1)
+        {
+            $(this).parents("#TblAsistencia").find("tr").each(function () {
+                $(this).find("td:eq(" + iIndex + ")").remove();
+                $(this).find("th:eq(" + iIndex + ")").remove();
+            });
+        }       
+});
+
 
 function getDayOfWeek(date) {
     //var fecha = new Date(date);
