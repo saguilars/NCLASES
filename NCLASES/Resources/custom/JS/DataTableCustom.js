@@ -129,7 +129,7 @@
 
       options: {
         addButton: '#addToTable',
-        table: '#exampleAddRow',
+        table: '.exampleAddRow',
         dialog: {
           wrapper: '#dialog',
           cancelButton: '#dialogCancel',

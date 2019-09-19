@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $('#summernote').summernote({
+    $('.summernote').summernote({
         height: 300,
         toolbar: [
             // [groupName, [list of button]]
@@ -20,4 +20,5 @@
         }
 
     });
+
 });

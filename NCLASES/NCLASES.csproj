@@ -4514,6 +4514,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AsistenciaController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\EventosController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NoticiasController.cs" />
     <Compile Include="Global.asax.cs">
@@ -5420,6 +5421,8 @@
     <Content Include="Resources\custom\Plugins\summernote\font\summernote.ttf" />
     <Content Include="Resources\custom\Plugins\summernote\font\summernote.woff" />
     <Content Include="Views\Noticias\DetalleNoticias.cshtml" />
+    <Content Include="Views\Eventos\Eventos.cshtml" />
+    <Content Include="Views\Eventos\DetalleEventos.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

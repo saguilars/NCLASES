@@ -28,12 +28,12 @@ $("table.DataTable").DataTable({
         }
     },
     // indigo, cyan, blue, green, blue-grey
-    //fnHeaderCallback: function (nHead, aData, iStart, iEnd, aiDisplay) {
-    //    $(nHead).addClass("blue-grey-700 ").find("th").addClass("white");
-    //},
-    //fnFooterCallback: function (nFoot, aData, iStart, iEnd, aiDisplay) {
-    //    $(nFoot).addClass("blue-grey-300 ");
-    //}
+    fnHeaderCallback: function (nHead, aData, iStart, iEnd, aiDisplay) {
+        $(nHead).addClass("bg-blue-800").find("th").addClass("white");
+    },
+    fnFooterCallback: function (nFoot, aData, iStart, iEnd, aiDisplay) {
+        $(nFoot).addClass("bg-grey-300 ");
+    }
 });
 
 
