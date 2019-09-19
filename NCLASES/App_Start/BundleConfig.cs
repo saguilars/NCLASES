@@ -25,7 +25,7 @@ namespace NCLASES.App_Start
                         "~/Resources/global/vendor/switchery/switchery.css" ,
                         "~/Resources/global/vendor/intro-js/introjs.css" ,
                         "~/Resources/global/vendor/slidepanel/slidePanel.css" ,
-                        "~/Resources/global/vendor/flag-icon-css/flag-icon.css" 
+                        "~/Resources/global/vendor/flag-icon-css/flag-icon.css"
                      ));
 
             bundles.Add(new StyleBundle("~/bundles/Datatable_CSS").Include(
@@ -94,7 +94,9 @@ namespace NCLASES.App_Start
                         "~/Resources/Custom/CSS/Spinner/book_flat.css" ,
                         "~/Resources/Custom/CSS/Spinner/book_full.css" ,
                         //RotarTabla ,
-                        "~/Resources/Custom/CSS/RotarColumnasTablas.css" 
+                        "~/Resources/Custom/CSS/RotarColumnasTablas.css" ,
+                        //Editor ,
+                        "~/Resources/Custom/Plugins/summernote/summernote.css"
                     ));
 
 
@@ -116,7 +118,7 @@ namespace NCLASES.App_Start
                     "~/Resources/global/vendor/switchery/switchery.js" ,
                     "~/Resources/global/vendor/intro-js/intro.js" ,
                     "~/Resources/global/vendor/screenfull/screenfull.js" ,
-                    "~/Resources/global/vendor/slidepanel/jquery-slidePanel.js" 
+                    "~/Resources/global/vendor/slidepanel/jquery-slidePanel.js"
                    ));
 
             bundles.Add(new ScriptBundle("~/bundles/Scripts_JS").Include(
@@ -243,7 +245,9 @@ namespace NCLASES.App_Start
                     "~/Resources/Custom/JS/bootstrap-datepicker.js",
                    "~/Resources/Custom/JS/DataTableNTablaBasica.js" ,
                     "~/Resources/Custom/JS/DataTableCustom.js" ,
-                    "~/Resources/Custom/JS/TOUR/Index-Tour.js" 
+                    "~/Resources/Custom/JS/TOUR/Index-Tour.js",
+                    "~/Resources/Custom/Plugins/summernote/summernote.js",
+                    "~/Resources/Custom/Plugins/summernote/lang/summernote-es-ES.js"
                 ));
 
         }

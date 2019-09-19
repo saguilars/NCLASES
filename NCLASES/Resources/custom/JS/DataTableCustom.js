@@ -182,7 +182,7 @@
                     },
         // indigo, cyan, blue, green, blue-grey
         fnHeaderCallback: function (nHead, aData, iStart, iEnd, aiDisplay) {
-            $(nHead).addClass("bg-cyan-700 ").find("th").addClass("white");
+            $(nHead).addClass("bg-blue-800").find("th").addClass("white");
         },
         fnFooterCallback: function (nFoot, aData, iStart, iEnd, aiDisplay) {
             $(nFoot).addClass("bg-grey-300 ");

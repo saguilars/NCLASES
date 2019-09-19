@@ -35,7 +35,7 @@
   (function () {
     (0, _jquery2.default)("#exampleHint2Basic").summernote({
       height: 100,
-      toolbar: false,
+      toolbar: true,
       placeholder: 'type with apple, orange, watermelon and lemon',
       hint: {
         words: ['apple', 'arange', 'watermelon', 'lemon'],
@@ -54,7 +54,7 @@
   (function () {
     (0, _jquery2.default)("#exampleHint2Mention").summernote({
       height: 100,
-      toolbar: false,
+      toolbar: true,
       hint: {
         mentions: ['jayden', 'sam', 'alvin', 'david'],
         match: /\B@(\w*)$/,

@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewBag.Title = "Noticias";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-content">
+    <div class="row" data-plugin="matchHeight" data-by-row="true">
+        <div class="col-xxl-12 col-lg-12">
+
+            <!-- Tabla DATATABLE-->
+            <div class="panel panel-dark panel-line" id="AyudaBody">
+                <header class="panel-heading">
+                    <div class="panel-actions"></div>
+                    <h3 class="panel-title">Listado</h3>
+                    <div class="panel-actions">
+                        <a class="btn btn-tagged btn-primary waves-effect waves-light font-size-16" href="#" data-target="#AddNoticias" data-toggle="modal" id="AnadirNoticias">
+                            <span class="btn-tag"><i class="icon fa-plus" aria-hidden="true"></i></span>Agregar
+                        </a>
+                    </div>
+                </header>
+                <div class="panel-body">
+                    <table class="table table-hover table-striped w-full" id="exampleAddRow">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>Titulo</th>
+                                <th>Descripción</th>
+                                <th id="AyudaAccion">Acción</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>id</th>
+                                <th>Titulo</th>
+                                <th>Descripción</th>
+                                <th>Acción</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Libros de Texto 2018-2019</td>
+                                <td>Ya tenemos los libros de texto de Educación Infantil, Primaria y Secundaria para el próximo curso 2018-2019.</td>
+                                <td class="actions">
+                                    <a href="@Url.Action("DetalleNoticias", "Noticias", new { id = 1 })" class="btn btn-sm btn-icon btn-pure btn-default on-default" data-toggle="tooltip" data-original-title="Mostrar Detalle">
+                                        <i class="icon fa-eye blue-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default" data-original-title="Editar" data-target="#AddNoticias" data-toggle="modal">
+                                        <i class="icon fa-edit green-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row" data-toggle="tooltip" data-original-title="Eliminar">
+                                        <i class="icon fa-trash-o red-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Bienvenida</td>
+                                <td>Nclases les invita a formar parte de era digital</td>
+                                <td class="actions">
+                                    <a href="@Url.Action("DetalleNoticias", "Noticias", new { id = 2 })" class="btn btn-sm btn-icon btn-pure btn-default on-default" data-toggle="tooltip" data-original-title="Mostrar Detalle">
+                                        <i class="icon fa-eye blue-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default" data-original-title="Editar" data-target="#AddNoticias" data-toggle="modal">
+                                        <i class="icon fa-edit green-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row" data-toggle="tooltip" data-original-title="Eliminar">
+                                        <i class="icon fa-trash-o red-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal Guardar nueva asistencia-->
+<div class="modal fade modal-primary example-modal-lg" id="AddNoticias" aria-hidden="true" aria-labelledby="AddNoticias" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">Añadir Nueva Noticia</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="example">
+                    <div class="form-group">
+                        <label class="form-control-label" for="LabelTitulo">Agregar Titulo Noticia</label>
+                        <input type="text" class="form-control" id="InputTitulo" placeholder="Titulo">
+                    </div>
+                </div>
+                <div id="summernote"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="icol" data-dismiss="modal">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIN Modal Guardar nueva asistencia-->
+
+@section Scripts
+{
+    <script src="@Url.Content("~/Resources/Custom/JS/EditorTextoSummernote.js")"></script>
+}
+
+

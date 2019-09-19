@@ -38,7 +38,7 @@
       key: 'getDefaults',
       value: function getDefaults() {
         return {
-          height: 300
+          height: 250
         };
       }
     }]);
