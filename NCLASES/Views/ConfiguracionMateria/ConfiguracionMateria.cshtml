@@ -1,0 +1,197 @@
+﻿
+@{
+    ViewBag.Title = "ConfiguracionMateria";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="page-content">
+    <div class="row" data-plugin="matchHeight" data-by-row="true">
+        <div class="col-xxl-12 col-lg-12">
+
+            <!-- Tabla DATATABLE-->
+            <div class="panel panel-dark panel-line" id="AyudaBody">
+                <header class="panel-heading">
+                    <div class="panel-title">
+                        <div class="dropdown" style="width:200px; z-index:1;">
+                            <select class="form-control" data-plugin="select2" data-style="btn-outline btn-primary" data-allow-clear="true">
+                                <option>Seleccionar Parcial</option>
+                                <optgroup label="Semestre 1">
+                                    <option value="S1P1">Parcial 1</option>
+                                    <option value="S1P2">Parcial 2</option>
+                                    <option value="S1P3">Parcial 3</option>
+                                    <option value="S1P4">Parcial 4</option>
+                                </optgroup>
+                                <optgroup label="Semestre 2">
+                                    <option value="S2P1">Parcial 1</option>
+                                    <option value="S2P2">Parcial 2</option>
+                                    <option value="S2P3">Parcial 3</option>
+                                    <option value="S2P4">Parcial 4</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="panel-actions">
+                        <div class="float-right">
+                            <div class="col-lg-6">
+                                <a class="btn btn-tagged btn-primary waves-effect waves-light font-size-16" href="#" data-target="#AddConfMateria" data-toggle="modal" id="AnadirConfMateria">
+                                    <span class="btn-tag"><i class="icon fa-plus" aria-hidden="true"></i></span>Agregar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="panel-body">                 
+                    <table class="table table-hover table-striped w-full DataTable">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Puntaje</th>
+                                <th id="AyudaAccion">Acción</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>id</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Puntaje</th>
+                                <th>Acción</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tareas en Casa</td>
+                                <td>Lista de tareas agregadas a los estudiantes para realizarce en casa</td>
+                                <td>20</td>
+                                <td class="actions">
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default" data-original-title="Editar" data-target="#AddConfMateria" data-toggle="modal">
+                                        <i class="icon fa-edit green-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row" data-toggle="tooltip" data-original-title="Eliminar">
+                                        <i class="icon fa-trash-o red-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Tareas en Clase</td>
+                                <td>Lista de tareas agregadas a los estudiantes para realizarce en el aula de clases</td>
+                                <td>10</td>
+                                <td class="actions">
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default" data-original-title="Editar" data-target="#AddConfMateria" data-toggle="modal">
+                                        <i class="icon fa-edit green-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row" data-toggle="tooltip" data-original-title="Eliminar">
+                                        <i class="icon fa-trash-o red-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Proyetos</td>
+                                <td>Proyectos por parcial, para poner en practica la teoria recibida en clases</td>
+                                <td>40</td>
+                                <td class="actions">
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default" data-original-title="Editar" data-target="#AddConfMateria" data-toggle="modal">
+                                        <i class="icon fa-edit green-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row" data-toggle="tooltip" data-original-title="Eliminar">
+                                        <i class="icon fa-trash-o red-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Sistematicos</td>
+                                <td>Pruebas escritas para validar la teoria recibida en el aula de clase </td>
+                                <td>30</td>
+                                <td class="actions">
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default" data-original-title="Editar" data-target="#AddConfMateria" data-toggle="modal">
+                                        <i class="icon fa-edit green-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row" data-toggle="tooltip" data-original-title="Eliminar">
+                                        <i class="icon fa-trash-o red-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal Guardar Nueva Configuracion Materia-->
+<div class="modal fade modal-primary" id="AddConfMateria" aria-hidden="true" aria-labelledby="AddConfMateria" role="dialog" tabindex="-1">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">Añadir Nuevo Tipo de Evaluación</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="example">
+                    <div class="form-group">
+                        <label class="form-control-label" for="LabelNombre">Nombre</label>
+                        <input type="text" class="form-control" id="InputNombre" placeholder="Nombre ">
+                    </div>
+                </div>
+
+                <div class="example">
+                    <div class="form-group">
+                        <label class="form-control-label" for="LabelDescripcionConfMateria">Descripción</label>
+                        <div class="form-group">
+                            <textarea class="form-control" style="margin-top: 0px; margin-bottom: 0px; height: 61px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example">
+                    <div class="form-group">
+                        <label class="form-control-label" for="LabelPuntaje">Puntaje</label>
+                        <input type="text" class="form-control" name="touchSpinVertical" data-plugin="TouchSpin" data-verticalbuttons="true" value="0" />
+                    </div>
+                </div>
+
+                <div class="example">
+                    <div class="form-group">
+                        <label class="form-control-label" for="LabelParcialConfMateria">Agregar a Parciales</label>
+                        <select class="form-control" multiple data-plugin="select2" data-allow-clear="true">
+                            <option></option>
+                            <optgroup label="Semestre 1">
+                                <option value="S1P1">Parcial 1</option>
+                                <option value="S1P2">Parcial 2</option>
+                                <option value="S1P3">Parcial 3</option>
+                                <option value="S1P4">Parcial 4</option>
+                            </optgroup>
+                            <optgroup label="Semestre 2">
+                                <option value="S2P1">Parcial 1</option>
+                                <option value="S2P2">Parcial 2</option>
+                                <option value="S2P3">Parcial 3</option>
+                                <option value="S2P4">Parcial 4</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="icol" data-dismiss="modal">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIN Modal Guardar Configuracion Materia-->

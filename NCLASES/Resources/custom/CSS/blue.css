@@ -9663,9 +9663,14 @@ a.list-group-item-dark.active, button.list-group-item-dark.active {
 }
 
 /*CUSTOM*/
-.select2-container--default .select2-selection--single  {
+.select2-container--default .select2-selection--single{
     border-color: #56a9c5 !important;
 }
+
+.select2-container--default .select2-selection--multiple {
+    border-color: #56a9c5 !important;
+}
+
 
 .btn-group > .btn:first-child {
     margin-left: 0;

@@ -151,6 +151,8 @@
     <Content Include="Images\LOGO\LogoLogin.png" />
     <Content Include="Images\LOGO\LOGO_NCLASES_blanco.png" />
     <Content Include="Images\LOGO\LOGO_NCLASES_color.png" />
+    <Content Include="Images\MATERIAS\MATEMATICA.jpg" />
+    <Content Include="Images\MATERIAS\MateriaDefault.png" />
     <Content Include="Images\PORTADAS\portada1.jpg" />
     <Content Include="Images\PORTADAS\portada10.png" />
     <Content Include="Images\PORTADAS\portada11.jpg" />
@@ -4513,10 +4515,13 @@
     <Compile Include="App_Start\ReactConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AsistenciaController.cs" />
+    <Compile Include="Controllers\ConfiguracionMateriaController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\EventosController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MateriasController.cs" />
     <Compile Include="Controllers\NoticiasController.cs" />
+    <Compile Include="Controllers\TareasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -5423,6 +5428,8 @@
     <Content Include="Views\Noticias\DetalleNoticias.cshtml" />
     <Content Include="Views\Eventos\Eventos.cshtml" />
     <Content Include="Views\Eventos\DetalleEventos.cshtml" />
+    <Content Include="Views\Materias\Materias.cshtml" />
+    <Content Include="Views\ConfiguracionMateria\ConfiguracionMateria.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -5433,6 +5440,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Tareas\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
