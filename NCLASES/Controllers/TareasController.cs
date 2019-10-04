@@ -13,5 +13,20 @@ namespace NCLASES.Controllers
         {
             return View();
         }
+
+        public ActionResult VerTareas()
+        {
+            return View();
+        }
+
+        public ActionResult CrearTareas()
+        {
+            return View();
+        }
+
+        public ActionResult EvaluarTareas()
+        {
+            return View();
+        }
     }
 }

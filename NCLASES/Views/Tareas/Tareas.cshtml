@@ -1,0 +1,149 @@
+﻿
+@{
+    ViewBag.Title = "Tareas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-content">
+    <div class="row" data-plugin="matchHeight" data-by-row="true">
+        <div class="col-xxl-12 col-lg-12">
+
+            <div class="example-wrap">
+                <div class="nav-tabs-horizontal" data-plugin="tabs">
+                    <ul class="nav nav-tabs nav-tabs-line tabs-line-top" role="tablist">
+                        <li class="widget-tab nav-item" role="presentation">
+                            <a href="#Vigentes" class=" widget-tab-link nav-link active" data-toggle="tab" aria-controls="Vigentes" role="tab">
+                                <i class="icon fa-file-text" aria-hidden="true" style="color:#589ffc;"></i>Vigentes
+                            </a>
+                        </li>
+                        <li class="widget-tab nav-item" role="presentation">
+                            <a href="#Anteriores" class="widget-tab-link nav-link" data-toggle="tab" aria-controls="Anteriores">
+                                <i class="icon fa-folder-open" aria-hidden="true" style="color:#28d17c;"></i>Anteriores
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <div class="tab-content pt-20">
+                        <div class="tab-pane active" id="Vigentes" role="tabpanel">
+                            <!-- Tareas Vigentes -->
+                            <div class="panel panel-dark panel-line">
+                                <header class="panel-heading">
+                                    <div class="panel-actions"></div>
+                                    <h3 class="panel-title">Tareas y Proyectos</h3>
+                                    <div class="panel-actions">
+                                        <a class="btn btn-tagged btn-primary waves-effect waves-light font-size-16" href="@Url.Action("CrearTareas", "Tareas")" id="AnadirTareas">
+                                            <span class="btn-tag"><i class="icon fa-plus" aria-hidden="true"></i></span>Añadir
+                                        </a>
+                                    </div>
+                                </header>
+                                <div class="panel-body">
+                                    <table class="table table-hover table-striped w-full DataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Tarea</th>
+                                                <th>Clase</th>
+                                                <th>Enviada</th>
+                                                <th>Debe Entregarse</th>
+                                                <th>Tipo</th>
+                                                <th>Estado</th>
+                                                <th id="AyudaAccion">Acción</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Tarea</th>
+                                                <th>Clase</th>
+                                                <th>Enviada</th>
+                                                <th>Debe Entregarse</th>
+                                                <th>Tipo</th>
+                                                <th>Estado</th>
+                                                <th>Acción</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <tr>
+                                                <td>Factorización</td>
+                                                <td>Matemáticas</td>
+                                                <td>04/10/2019</td>
+                                                <td>07/10/2019</td>
+                                                <td>Tarea en Casa</td>
+                                                <td>Proceso</td>
+                                                <td class="actions">
+                                                    <a href="@Url.Action("VerTareas", "Tareas")" class="btn btn-sm btn-icon btn-pure btn-default on-default" data-toggle="tooltip" data-original-title="Ver Detalle">
+                                                        <i class="icon fa-eye blue-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                                    </a>
+                                                    <a href="@Url.Action("EvaluarTareas", "Tareas")" class="btn btn-sm btn-icon btn-pure btn-default on-default" data-toggle="tooltip" data-original-title="Evaluar">
+                                                        <i class="icon fa-check-square-o" aria-hidden="true" style="font-size: 22px; color:#eb6709;"></i>
+                                                    </a>
+                                                    <a href="@Url.Action("CrearTareas", "Tareas")" class="btn btn-sm btn-icon btn-pure btn-default on-default" data-toggle="tooltip" data-original-title="Editar">
+                                                        <i class="icon fa-edit green-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                                    </a>
+                                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row" data-toggle="tooltip" data-original-title="Eliminar">
+                                                        <i class="icon fa-trash-o red-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Feria Cientifica</td>
+                                                <td>Computación</td>
+                                                <td>05/07/2019</td>
+                                                <td>10/10/2019</td>
+                                                <td>Proyecto</td>
+                                                <td>Proceso</td>
+                                                <td class="actions">
+                                                    <a href="@Url.Action("VerTareas", "Tareas")" class="btn btn-sm btn-icon btn-pure btn-default on-default" data-toggle="tooltip" data-original-title="Ver Detalle">
+                                                        <i class="icon fa-eye blue-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                                    </a>
+                                                    <a href="@Url.Action("EvaluarTareas", "Tareas")" class="btn btn-sm btn-icon btn-pure btn-default on-default" data-toggle="tooltip" data-original-title="Evaluar">
+                                                        <i class="icon fa-check-square-o" aria-hidden="true" style="font-size: 22px; color:#eb6709;"></i>
+                                                    </a>
+                                                    <a href="@Url.Action("CrearTareas", "Tareas")" class="btn btn-sm btn-icon btn-pure btn-default on-default" data-toggle="tooltip" data-original-title="Editar">
+                                                        <i class="icon fa-edit green-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                                    </a>
+                                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row" data-toggle="tooltip" data-original-title="Eliminar">
+                                                        <i class="icon fa-trash-o red-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+
+
+
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- FIN Tareas Vigentes -->
+                        </div>
+                        <div class="tab-pane" id="Anteriores" role="tabpanel">
+                            <!-- Tareas Anteriores -->
+                            <div class="panel panel-dark panel-line">
+                                <header class="panel-heading">
+                                    <div class="panel-actions"></div>
+                                    <h3 class="panel-title">Tablas columnas diagonales</h3>
+                                    <div class="panel-actions">
+                                        <a class="btn btn-tagged btn-primary waves-effect waves-light font-size-16" href="#" data-target="#AddAnteriores" data-toggle="modal" id="AnadirAnteriores">
+                                            <span class="btn-tag"><i class="icon fa-plus" aria-hidden="true"></i></span>Añadir
+                                        </a>
+                                    </div>
+                                </header>
+                                <div class="panel-body">
+
+                                </div>
+                            </div>
+                            <!-- FIN Tareas Anteriores -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+

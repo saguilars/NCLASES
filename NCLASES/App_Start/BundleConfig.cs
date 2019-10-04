@@ -6,7 +6,7 @@ namespace NCLASES.App_Start
 {
     public class BundleConfig
     {
-        
+
 
         public static void RegisterBundles(BundleCollection bundles)
         {
@@ -20,12 +20,16 @@ namespace NCLASES.App_Start
                       ));
 
             bundles.Add(new StyleBundle("~/bundles/Plugins_CSS").Include(
-                        "~/Resources/global/vendor/animsition/animsition.css" ,
-                        "~/Resources/global/vendor/asscrollable/asScrollable.css" ,
-                        "~/Resources/global/vendor/switchery/switchery.css" ,
-                        "~/Resources/global/vendor/intro-js/introjs.css" ,
-                        "~/Resources/global/vendor/slidepanel/slidePanel.css" ,
-                        "~/Resources/global/vendor/flag-icon-css/flag-icon.css"
+                        "~/Resources/global/vendor/animsition/animsition.css",
+                        "~/Resources/global/vendor/asscrollable/asScrollable.css",
+                        "~/Resources/global/vendor/switchery/switchery.css",
+                        "~/Resources/global/vendor/intro-js/introjs.css",
+                        "~/Resources/global/vendor/slidepanel/slidePanel.css",
+                        "~/Resources/global/vendor/flag-icon-css/flag-icon.css",
+                        "~/Resources/global/vendor/bootstrap-sweetalert/sweetalert.css",
+                        "~/Resources/global/vendor/toastr/toastr.css" ,
+                        "~/Resources/global/vendor/jquery-selective/jquery-selective.css",
+                        "~/Resources/assets/examples/css/apps/work.css"
                      ));
 
             bundles.Add(new StyleBundle("~/bundles/Datatable_CSS").Include(
@@ -62,7 +66,9 @@ namespace NCLASES.App_Start
                         "~/Resources/global/vendor/magnific-popup/magnific-popup.css" ,
                         "~/Resources/assets/examples/css/advanced/lightbox.css" ,
                         //Notificaciones
-                        "~/Resources/global/vendor/plyr/plyr.css" 
+                        "~/Resources/global/vendor/plyr/plyr.css" ,
+                        //Tabs
+                        "~/Resources/Custom/CSS/Tabs/TabsPrincipal.css"
                     ));
 
             bundles.Add(new StyleBundle("~/bundles/FormAdvance_CSS").Include(
@@ -118,7 +124,11 @@ namespace NCLASES.App_Start
                     "~/Resources/global/vendor/switchery/switchery.js" ,
                     "~/Resources/global/vendor/intro-js/intro.js" ,
                     "~/Resources/global/vendor/screenfull/screenfull.js" ,
-                    "~/Resources/global/vendor/slidepanel/jquery-slidePanel.js"
+                    "~/Resources/global/vendor/slidepanel/jquery-slidePanel.js",
+                    "~/Resources/global/vendor/bootbox/bootbox.js",
+                    "~/Resources/global/vendor/bootstrap-sweetalert/sweetalert.js",
+                    "~/Resources/global/vendor/toastr/toastr.js",
+                    "~/Resources/global/vendor/jquery-selective/jquery-selective.min.js"
                    ));
 
             bundles.Add(new ScriptBundle("~/bundles/Scripts_JS").Include(
@@ -139,7 +149,10 @@ namespace NCLASES.App_Start
                     "~/Resources/assets/js/Site.js" ,
                     "~/Resources/global/js/Plugin/asscrollable.js" ,
                     "~/Resources/global/js/Plugin/slidepanel.js" ,
-                    "~/Resources/global/js/Plugin/switchery.js" 
+                    "~/Resources/global/js/Plugin/switchery.js" ,
+                    "~/Resources/global/js/Plugin/bootbox.js",
+                    "~/Resources/global/js/Plugin/bootstrap-sweetalert.js",
+                    "~/Resources/global/js/Plugin/toastr.js"
                    ));
 
             bundles.Add(new ScriptBundle("~/bundles/Datatable_JS").Include(
@@ -238,7 +251,10 @@ namespace NCLASES.App_Start
                     "~/Resources/global/js/Plugin/jquery-strength.js" ,
                     "~/Resources/global/js/Plugin/multi-select.js" ,
                     "~/Resources/global/js/Plugin/jquery-placeholder.js" ,
-                    "~/Resources/assets/examples/js/forms/advanced.js" 
+                    "~/Resources/assets/examples/js/forms/advanced.js",
+                    "~/Resources/assets/js/BaseApp.js",
+                    "~/Resources/Custom/JS/Work.js",
+                    "~/Resources/assets/examples/js/apps/work.js"
                   ));
                         
             bundles.Add(new ScriptBundle("~/bundles/Custom_JS").Include(
@@ -247,7 +263,8 @@ namespace NCLASES.App_Start
                     "~/Resources/Custom/JS/DataTableCustom.js" ,
                     "~/Resources/Custom/JS/TOUR/Index-Tour.js",
                     "~/Resources/Custom/Plugins/summernote/summernote.js",
-                    "~/Resources/Custom/Plugins/summernote/lang/summernote-es-ES.js"
+                    "~/Resources/Custom/Plugins/summernote/lang/summernote-es-ES.js",
+                    "~/Resources/Custom/JS/bootbox-sweetalert.js"
                 ));
 
         }

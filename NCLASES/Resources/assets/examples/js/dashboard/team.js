@@ -96,19 +96,19 @@
       var member = [{
         id: 'uid_1',
         name: 'Herman Beck',
-        avatar: '../../../global/portraits/1.jpg'
+        avatar: '~/Resources/global/portraits/1.jpg'
       }, {
         id: 'uid_2',
         name: 'Mary Adams',
-        avatar: '../../../global/portraits/2.jpg'
+        avatar: '~/Resources/global/portraits/2.jpg'
       }, {
         id: 'uid_3',
         name: 'Caleb Richards',
-        avatar: '../../../global/portraits/3.jpg'
+        avatar: '~/Resources/global/portraits/3.jpg'
       }, {
         id: 'uid_4',
         name: 'June Lane',
-        avatar: '../../../global/portraits/4.jpg'
+        avatar: '~/Resources/global/portraits/4.jpg'
       }];
 
       var items = handleSelectiveItem;
@@ -150,11 +150,11 @@
       var handleSelectiveItem = [{
         id: 'uid_1',
         name: 'Herman Beck',
-        avatar: '../../../global/portraits/1.jpg'
+        avatar: '~/Resources/global/portraits/1.jpg'
       }, {
         id: 'uid_2',
         name: 'Caleb Richards',
-        avatar: '../../../global/portraits/2.jpg'
+        avatar: '~/Resources/global/portraits/2.jpg'
       }];
 
       handleSelective(handleSelectiveItem);

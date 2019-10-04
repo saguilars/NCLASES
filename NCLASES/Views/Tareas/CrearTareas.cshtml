@@ -1,0 +1,114 @@
+﻿
+@{
+    ViewBag.Title = "Crear Tareas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="page-content">
+    <div class="row" data-plugin="matchHeight" data-by-row="true">
+        <div class="col-xxl-12 col-lg-12">
+
+            <div class="panel panel-dark panel-line">
+                <header class="panel-heading">
+                    <div class="panel-actions"></div>
+                    <h3 class="panel-title">Crear Tareas ó Proyectos</h3>
+                </header>
+                <div class="panel-body">
+                    <form id="exampleFullForm" autocomplete="off">
+                        <div class="row row-lg">
+                            <div class="col-lg-6 offset-lg-3 form-horizontal">
+
+                                <div class="example">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="LabelNombre">
+                                            Nombre
+                                            <span class="required">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="InputNombre" placeholder="Nombre ">
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="inputTipoTarea">
+                                            Tipo
+                                            <span class="required">*</span>
+                                        </label>
+                                        <div class="example">
+                                            <select data-plugin="selectpicker" title="Seleccionar Elemento">
+                                                <option></option>
+                                                <option class="blue-800">Tarea en Casa</option>
+                                                <option class="blue-800">Proyecto</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="LabelDescripcionConfMateria">
+                                            Descripción
+                                            <span class="required">*</span>
+                                        </label>
+                                        <div class="form-group">
+                                            <div id="NoticiaSummernote" class="summernote"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="LabelFechaEntrega">
+                                            Fecha Entrega
+                                            <span class="required">*</span>
+                                        </label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="icon wb-calendar" aria-hidden="true"></i>
+                                            </span>
+                                            <input type="text" class="form-control" data-plugin="datepicker">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="example">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="LabelPuntaje">
+                                            Puntaje
+                                            <span class="required">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" name="touchSpinVertical" data-plugin="TouchSpin" data-verticalbuttons="true" value="0" />
+                                    </div>
+                                </div><br />
+
+                                <div class="example-wrap">
+                                    <div class="example">
+                                        <h4 class="example-title">Adjuntar Archivos</h4>
+                                        <input type="file" id="input-file-now" data-plugin="dropify" data-default-file="" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group text-center padding-top-m">
+                                    <button type="button" class="btn btn-animate btn-animate-side btn-success exampleSuccessMessage" >
+                                        <span><i class="icon wb-download" aria-hidden="true"></i>Side Animation</span>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                           
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@section Scripts
+{
+    <script src="@Url.Content("~/Resources/Custom/JS/EditorTextoSummernote.js")"></script>
+}

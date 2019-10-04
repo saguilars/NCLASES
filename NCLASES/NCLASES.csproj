@@ -518,12 +518,14 @@
     <Content Include="Resources\custom\CSS\Spinner\book_full.css" />
     <Content Include="Resources\custom\CSS\Tabs\TabsPrincipal.css" />
     <Content Include="Resources\custom\JS\Asistencia.js" />
+    <Content Include="Resources\custom\JS\bootbox-sweetalert.js" />
     <Content Include="Resources\custom\JS\bootstrap-datepicker.js" />
     <Content Include="Resources\custom\JS\DataTableAddColumn.js" />
     <Content Include="Resources\custom\JS\DataTableCustom.js" />
     <Content Include="Resources\custom\JS\DataTableNTablaBasica.js" />
     <Content Include="Resources\custom\JS\EditorTextoSummernote.js" />
     <Content Include="Resources\custom\JS\TOUR\Index-Tour.js" />
+    <Content Include="Resources\custom\JS\Work.js" />
     <Content Include="Resources\custom\Plugins\summernote\lang\summernote-ar-AR.js" />
     <Content Include="Resources\custom\Plugins\summernote\lang\summernote-bg-BG.js" />
     <Content Include="Resources\custom\Plugins\summernote\lang\summernote-ca-ES.js" />
@@ -5430,6 +5432,10 @@
     <Content Include="Views\Eventos\DetalleEventos.cshtml" />
     <Content Include="Views\Materias\Materias.cshtml" />
     <Content Include="Views\ConfiguracionMateria\ConfiguracionMateria.cshtml" />
+    <Content Include="Views\Tareas\Tareas.cshtml" />
+    <Content Include="Views\Tareas\VerTareas.cshtml" />
+    <Content Include="Views\Tareas\CrearTareas.cshtml" />
+    <Content Include="Views\Tareas\EvaluarTareas.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -5440,7 +5446,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Tareas\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
