@@ -1,0 +1,108 @@
+﻿
+@{
+    ViewBag.Title = "GrupoTrabajo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-content">
+    <div class="row" data-plugin="matchHeight" data-by-row="true">
+        <div class="col-xxl-12 col-lg-12">
+
+            <div class="panel panel-dark panel-line">
+                <header class="panel-heading">
+                    <div class="panel-actions"></div>
+                    <h3 class="panel-title">Grupos de Trabajo</h3>
+                    <div class="panel-actions">
+                        <a class="btn btn-tagged btn-primary waves-effect waves-light font-size-16" href="#" data-target="#AddGruposTrabajo" data-toggle="modal" id="AnadirGruposTrabajo">
+                            <span class="btn-tag"><i class="icon fa-plus" aria-hidden="true"></i></span>Agregar
+                        </a>
+                    </div>
+                </header>
+                <div class="panel-body">
+                    <table class="table table-hover table-striped w-full DataTable">
+                        <thead>
+                            <tr>
+                                <th>Foto</th>
+                                <th>Nombre</th>
+                                <th>Miembros</th>
+                                <th id="AyudaAccion">Acción</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Foto</th>
+                                <th>Nombre</th>
+                                <th>Miembros</th>
+                                <th id="AyudaAccion">Acción</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a class="avatar avatar-lg m-5" href="javascript:void(0)">
+                                        <img src="@Url.Content("~/Resources/global/photos/ingenieros.jpg")" alt="">
+                                    </a>
+                                </td>
+                                <td>Los Ingenieros</td>
+                                <td> <select multiple="multiple" class="plugin-selective"></select> </td>
+                                <td class="actions">
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default" data-original-title="Editar" data-target="#AddGruposTrabajo" data-toggle="modal">
+                                        <i class="icon fa-edit green-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default remove-row" data-toggle="tooltip" data-original-title="Eliminar">
+                                        <i class="icon fa-trash-o red-600" aria-hidden="true" style="font-size: 22px;"></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal agregar grupo de trabajo-->
+<div class="modal fade modal-primary example-modal-lg" id="AddGruposTrabajo" aria-hidden="true" aria-labelledby="AddGruposTrabajo" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">Añadir Grupo de Trabajo</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="text-center p-30 pb-15">
+                    <a class="avatar avatar-100 mb-10 bg-white" href="javascript:void(0)">
+                        <img src="@Url.Content("~/Resources/global/photos/ingenieros.jpg")" alt="">
+                    </a>
+                </div>
+
+
+                <div class="example">
+                    <div class="form-group">
+                        <label class="form-control-label" for="LabelNombre">Nombre</label>
+                        <input type="text" class="form-control" id="InputNombre" placeholder="Nombre ">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label mb-15" for="name">Miembros:</label>
+                    <select multiple="multiple" class="plugin-selective"></select>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="icol" data-dismiss="modal">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIN Modal agregar grupo de trabajo-->

@@ -739,6 +739,7 @@
     <Content Include="Resources\global\js\Plugin\toastr.js" />
     <Content Include="Resources\global\js\Plugin\toolbar.js" />
     <Content Include="Resources\global\js\Plugin\webui-popover.js" />
+    <Content Include="Resources\global\photos\ingenieros.jpg" />
     <Content Include="Resources\global\photos\placeholder.png" />
     <Content Include="Resources\global\photos\placeholder1.png" />
     <Content Include="Resources\global\photos\placeholder2.png" />
@@ -4521,6 +4522,7 @@
     <Compile Include="Controllers\ConfiguracionMateriaController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\EventosController.cs" />
+    <Compile Include="Controllers\GrupoTrabajoController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MateriasController.cs" />
     <Compile Include="Controllers\NoticiasController.cs" />
@@ -5437,6 +5439,7 @@
     <Content Include="Views\Tareas\VerTareas.cshtml" />
     <Content Include="Views\Tareas\CrearTareas.cshtml" />
     <Content Include="Views\Tareas\EvaluarTareas.cshtml" />
+    <Content Include="Views\GrupoTrabajo\GrupoTrabajo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
