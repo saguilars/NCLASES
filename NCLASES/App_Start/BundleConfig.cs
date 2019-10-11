@@ -28,8 +28,7 @@ namespace NCLASES.App_Start
                         "~/Resources/global/vendor/flag-icon-css/flag-icon.css",
                         "~/Resources/global/vendor/bootstrap-sweetalert/sweetalert.css",
                         "~/Resources/global/vendor/toastr/toastr.css" ,
-                        "~/Resources/global/vendor/jquery-selective/jquery-selective.css",
-                        "~/Resources/assets/examples/css/apps/work.css"
+                        "~/Resources/global/vendor/jquery-selective/jquery-selective.css"
                      ));
 
             bundles.Add(new StyleBundle("~/bundles/Datatable_CSS").Include(

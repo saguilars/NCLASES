@@ -11,7 +11,7 @@
     <title>Nclases | @ViewBag.Title</title>
 
     <link rel="apple-touch-icon" href="@Url.Content("~/images/LOGONCLASSES.png")">
-    <link rel="shortcut icon" href="@Url.Content("~/images/LOGO/ico_NCLASSES.ico")">
+    <link rel="shortcut icon" href="@Url.Content("~/images/LOGO/favicon.ico")">
 
     <!-- Stylesheets -->
     @Styles.Render("~/bundles/Stylesheets_CSS")
@@ -35,6 +35,8 @@
 
     <!-- Custom -->
     @Styles.Render("~/bundles/Custom_CSS")
+
+    @RenderSection("Styles", required: false)
 
 
     <script src="~/Resources/global/vendor/breakpoints/breakpoints.js"></script>

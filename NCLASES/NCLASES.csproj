@@ -517,6 +517,7 @@
     <Content Include="Resources\custom\CSS\Spinner\book_flat.css" />
     <Content Include="Resources\custom\CSS\Spinner\book_full.css" />
     <Content Include="Resources\custom\CSS\Tabs\TabsPrincipal.css" />
+    <Content Include="Resources\custom\CSS\work.css" />
     <Content Include="Resources\custom\JS\Asistencia.js" />
     <Content Include="Resources\custom\JS\bootbox-sweetalert.js" />
     <Content Include="Resources\custom\JS\bootstrap-datepicker.js" />
