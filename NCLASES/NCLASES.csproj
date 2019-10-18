@@ -525,6 +525,7 @@
     <Content Include="Resources\custom\JS\DataTableCustom.js" />
     <Content Include="Resources\custom\JS\DataTableNTablaBasica.js" />
     <Content Include="Resources\custom\JS\EditorTextoSummernote.js" />
+    <Content Include="Resources\custom\JS\Notas.js" />
     <Content Include="Resources\custom\JS\TOUR\Index-Tour.js" />
     <Content Include="Resources\custom\JS\Work.js" />
     <Content Include="Resources\custom\Plugins\summernote\lang\summernote-ar-AR.js" />
@@ -4525,6 +4526,7 @@
     <Compile Include="Controllers\GrupoTrabajoController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MateriasController.cs" />
+    <Compile Include="Controllers\NotasController.cs" />
     <Compile Include="Controllers\NoticiasController.cs" />
     <Compile Include="Controllers\TareasController.cs" />
     <Compile Include="Global.asax.cs">
@@ -5440,6 +5442,7 @@
     <Content Include="Views\Tareas\CrearTareas.cshtml" />
     <Content Include="Views\Tareas\EvaluarTareas.cshtml" />
     <Content Include="Views\GrupoTrabajo\GrupoTrabajo.cshtml" />
+    <Content Include="Views\Notas\Notas.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
