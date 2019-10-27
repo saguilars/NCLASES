@@ -130,7 +130,7 @@ $('#GuardarActividad').click(function(){
 /*Modal que guarda las NotaIndividual*/
 $('#GuardarNotaIndividual').click(function () {
     var NotaSeleccionada =  $("#NotaSeleccionada").val();
-    var i = 0; 
+
     $('table [type="button"]').each(function () {
         var id = $(this).attr("id");
         //Dentro de toda la tabla validar que se muestren solamente los textbox de la columna seleccionada
@@ -141,20 +141,19 @@ $('#GuardarNotaIndividual').click(function () {
             if (InputNotaIndividual) {
                
                 $(this).find('span').replaceWith("<span class='font-size-18 blue-grey-700'>" + InputNotaIndividual + "</span >");
+                //Agregar color a boton editado para dejar evidencia de la modificacion individual
+                $(this).removeClass("btn-pure btn-primary").addClass("bg-green-300");
 
-                //PENDIENTE REVISAR Y MODIFICAR NO FUNCIONA
-                $(this).parents('button').siblings('li.EditarActividad' + $('#InputNombreActividad').val() +'').replaceWith("<li class='list-inline-item EditarActividad" + $('#InputNombreActividad').val() + "'>\
-                        <div class='text-center'>\
-                          <input type='text' name='inputNotaAlumno_"+ $('#InputNombreActividad').val() + i + "' id='inputNotaAlumno_" + $('#InputNombreActividad').val() + i + "' style='width:28px'/>\
-                          <label></label>\
-                        </div>\
-                      </li>");
+                //agregar cambio al valor del input para cuando exista edicion multiple
+                var idInputnotalumno = $(this).prev().find('input').attr('id');
+                var element = document.getElementById(idInputnotalumno);
+                element.value = InputNotaIndividual;
+                    //.replaceWith("<input type='text' name='inputNotaAlumno_PRUEBA" + $('#InputNombreActividad').val() + i + "' id='inputNotaAlumno_" + $('#InputNombreActividad').val() + i + "' style='width:28px'/>");
             } else {
                 alert('Ingresa la nueva nota del alumno para continuar');
             }
             
         }
-        i++;
     });   
 });
 
